@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Einleitung}{3}
+\contentsline {section}{\numberline {2}Versuch 1: Frequenz und D\IeC {\"a}mpfung der freien Schwingung}{3}
+\contentsline {subsection}{\numberline {2.1}Versuchsdurchf\IeC {\"u}hrung}{3}
+\contentsline {subsection}{\numberline {2.2}Messwerte und Ergebnisse}{3}
+\contentsline {subsection}{\numberline {2.3}Fehlerrechnung}{3}
+\contentsline {subsection}{\numberline {2.4}Ergebnisdiskussion}{3}
+\contentsline {section}{\numberline {3}Versuch 2: Erzwungene Schwingungen}{3}
+\contentsline {subsection}{\numberline {3.1}Versuchsdurchf\IeC {\"u}hrung}{3}
+\contentsline {subsection}{\numberline {3.2}Messwerte und Ergebnisse}{3}
+\contentsline {subsection}{\numberline {3.3}Fehlerrechnung}{3}
+\contentsline {subsection}{\numberline {3.4}Ergebnisdiskussion}{3}
+\contentsline {section}{\numberline {4}Versuch 3: Computersimulation}{3}
+\contentsline {subsection}{\numberline {4.1}Versuchsdurchf\IeC {\"u}hrung}{3}
+\contentsline {subsection}{\numberline {4.2}Messwerte und Ergebnisse}{3}
+\contentsline {subsection}{\numberline {4.3}Fehlerrechnung}{3}
+\contentsline {subsection}{\numberline {4.4}Ergebnisdiskussion}{3}
