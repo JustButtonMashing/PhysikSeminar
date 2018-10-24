@@ -146,7 +146,7 @@ wie sich unterschiedliche Erregerfrequenzen auf das Pendel auswirken.
 In Versuch 2.1 haben wir durch probieren festgestellt, dass der optimale Phasenwinkel bei etwa 105$\degree$ liegt. 
 \subsection{Messwerte und Ergebnisse}
 Dämpfungsspannung von 2V:\\
-\begin{tabular}{llllll}
+\begin{tabular}{l|l|l|l|l|l}
 Messung &F ($\frac{1}{10s}$)&Phasendifferenz ($ms$)&Phasendifferenz ($\degree$)&T ($ms$)&Amplitude ($cm$)\\\hline
 1&40&145&24.1&2166&3.5\\
 2&42&172&27.9&2216&6.5\\
@@ -157,7 +157,7 @@ Messung &F ($\frac{1}{10s}$)&Phasendifferenz ($ms$)&Phasendifferenz ($\degree$)&
 \end{tabular}
 
 Dämpfungsspannung von 4V:\\
-\begin{tabular}{llllll}
+\begin{tabular}{l|l|l|l|l|l}
 Messung &F ($\frac{1}{10s}$)&Phasendifferenz ($ms$)&Phasendifferenz ($\degree$)&T ($ms$)&Amplitude ($cm$)\\\hline
 1&40&312&51.8&2167&2.7\\
 2&42&428&74.3&2073&3.9\\
@@ -173,9 +173,14 @@ Messung &F ($\frac{1}{10s}$)&Phasendifferenz ($ms$)&Phasendifferenz ($\degree$)&
 
 \section{Versuch 3: Computersimulation}
 \subsection{Versuchsdurchführung}
-Bei diesem Versuch verwenden wir eine MATLAB-Simulation, die die Phasenverschiebung nach Anregungsfrequenz und die Maximalamplitude nach Anregungsfrequenz bei einer erzwungenen Schwingung eines Federpendels zeigt. Die Anregungsfrequenz ist einstellbar, die Federhärte zufallsgeneriert und die Federmasse unbekannt. Wir wollen uns durch Probieren der Resonanzfrequenz des Pendels annähern.
-Für den zweiten Teil des Versuchs verwenden wir die \\ Website http://wwwchem.uwimona.edu.jm/spectra/jsmol/demos/acetophenone.html, um den Zusammenhang zwischen den Molekülschwingungen und dem Infrarotspektrum des Acetophenon-Moleküls herzustellen.
-\subsection{Ergebnisdiskussion}
+Beim ersten Teil dieses Versuchs verwenden wir eine MATLAB-Simulation, die die Phasenverschiebung nach Anregungsfrequenz und die Maximalamplitude nach Anregungsfrequenz bei einer erzwungenen Schwingung eines Federpendels zeigt. Die Anregungsfrequenz ist einstellbar, die Federhärte zufallsgeneriert und die Federmasse unbekannt. Wir wollen uns durch Probieren der Resonanzfrequenz des Pendels annähern. Mit der Resonanzfrequenz $\omega_{0}$ und der gegebenen Federkonstante $D$ können wir dann die Masse $m$ des Federpendels bestimmen:
+\begin{align*}
+\omega_{0} = \sqrt{\dfrac{D}{m}} \\
+m = \dfrac{D}{\omega_{0}^2}
+\end{align*}
+\\
+Für den zweiten Teil des Versuchs verwenden wir die Website \\http://wwwchem.uwimona.edu.jm/spectra/jsmol/demos/acetophenone.html, um den Zusammenhang zwischen den Molekülschwingungen und dem Infrarotspektrum des Acetophenon-Moleküls herzustellen.
+\subsection{Ergebnis und Diskussion}
 
 \begin{figure}[h]
   \caption{Infrarotspektrum des Acetophenon-Moleküls}
