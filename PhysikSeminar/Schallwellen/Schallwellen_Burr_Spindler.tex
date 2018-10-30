@@ -49,9 +49,79 @@
 
 \section{Einleitung}
 
-\section{Versuch 1: Schallgeschwindigkeiten in Gasen (Luft und $CO_{2}$}
+\section{Versuch 1: Schallgeschwindigkeiten in Gasen (Luft und $CO_{2}$)}
 \subsection{Versuchsdurchführung}
+Ziel des Versuches ist es, mithilfe eines Quincke'schen Resonanzrohres die Schallgeschwindigkeiten in Luft und $CO_{2}$ und daraus den Adiabatenexponenten in $CO_{2}$ zu berechnen.
+\\
 
+Der Versuchsaufbau sieht folgendermaßen aus: Ein Lautsprecher ist an einen Frequenzgenerator angeschlossen und ist über einem oben offenen Glasrohr angebracht. Innerhalb des Glasrohrs befindet sich ein vertikal beweglicher Stempel mit einem Mikrofon. Das Mikrofon ist an ein Voltmeter angeschlossen. Am Rohr kann an einer Millimeter-Skala die Position des Stempels abgelesen werden.
+
+Zuerst suchen wir die tiefstmögliche Stempelposition $x_{0}$, an der das Voltmeter maximal ausschlägt. Dann verschieben wir den Stempel bis zu einem Maximum an Position $x_{n}$, die möglichst nahe am oberen Rohrende liegt. Wir zählen dabei die Anzahl $n$ der zurückgelegten Maximumsabstände. Der Abstand $d = x_{n} - x_{0}$ entspricht dann der $n$-fachen Halbwellenlänge. Also berechnen wir daraus die Wellenlänge $\lambda$:
+\begin{align*}
+\lambda = 2 \dfrac{d}{n} =  2 \dfrac{x_{n}-x_{0}}{n}\\
+\end{align*}
+Anschließend können wir aus der Wellenlänge und der von uns eingestellten Frequenz $f$ die Schallgeschwindigkeit $c$ berechnen:
+\begin{align*}
+c = \lambda f
+\end{align*}
 \subsection{Messwerte und Ergebnisse}
+\subsubsection{Im Medium Luft}
+\begin{table}[h]
+\begin{tabular}{l|l|l|l|l|l|l|l}
+Messung & $f$ {[}Hz{]} & $x_{0}$ [mm] & n & $x_{n}$ [mm] & $d$ [mm]   & $\lambda$ [m]      & $c$ [m/s]      \\
+\hline
+1       & 1666       & 43                & 3 & 350               & 307 & 0,205 & 341,0 \\
+2       & 1666       & 39                & 3 & 350               & 311 & 0,207 & 345,4 \\
+3       & 2000       & 30                & 3 & 288               & 258 & 0,172 & 344,0 \\
+4       & 2000       & 28                & 3 & 287               & 259 & 0,173 & 345,3 \\
+5       & 2333       & 27                & 4 & 321               & 294 & 0,147 & 343,0 \\
+6       & 2333       & 27                & 4 & 322               & 295 & 0,148 & 344,1 \\
+7       & 2666       & 27                & 5 & 349               & 322 & 0,129 & 343,4 \\
+8       & 2666       & 28                & 5 & 349               & 321 & 0,128 & 342,3 \\
+9       & 3000       & 27                & 6 & 373               & 346 & 0,115 & 346,0 \\
+10      & 3000       & 27                & 6 & 372               & 345 & 0,115 & 345,0 \\
+11      & 3333       & 33                & 6 & 350               & 317 & 0,106 & 352,2 \\
+12      & 3333       & 34                & 6 & 343               & 309 & 0,103 & 343,3 \\
+13      & 3666       & 40                & 6 & 322               & 282 & 0,094 & 344,6 \\
+14      & 3666       & 42                & 6 & 323               & 281 & 0,094 & 343,4 \\
+15      & 4000       & 47                & 7 & 352               & 305 & 0,087 & 348,6 \\
+16      & 4000       & 46                & 7 & 350               & 304 & 0,087 & 347,4 \\
+17      & 4333       & 17                & 8 & 338               & 321 & 0,080 & 347,7 \\
+18      & 4333       & 16                & 8 & 340               & 324 & 0,081 & 351,0 \\
+19      & 4666       & 27                & 8 & 321               & 294 & 0,074 & 343,0 \\
+20      & 4666       & 26                & 8 & 324               & 298 & 0,075 & 347,6
+\end{tabular}
+\end{table}
+
+\subsubsection{Im Medium $CO_{2}$}
+\begin{table}[h]
+\begin{tabular}{l|l|l|l|l|l|l|l}
+Messung & $f$ {[}Hz{]} & $x_{0}$ [mm] & n & $x_{n}$ [mm] & $d$ [mm]   & $\lambda$ [m]      & $c$ [m/s]      \\
+\hline
+1       & 1666       & 43                & 3 & 295               & 252 & 0,168 & 279,9 \\
+2       & 1666       & 49                & 3 & 297               & 248 & 0,165 & 275,4 \\
+3       & 2000       & 48                & 4 & 330               & 282 & 0,141 & 282,0 \\
+4       & 2000       & 56                & 4 & 330               & 274 & 0,137 & 274,0 \\
+5       & 2333       & 68                & 5 & 361               & 293 & 0,117 & 273,4 \\
+6       & 2333       & 69                & 5 & 362               & 293 & 0,117 & 273,4 \\
+7       & 2666       & 78                & 5 & 335               & 257 & 0,103 & 274,1 \\
+8       & 2666       & 68                & 5 & 330               & 262 & 0,105 & 279,4 \\
+9       & 3000       & 29                & 6 & 315               & 286 & 0,095 & 286,0 \\
+10      & 3000       & 32                & 6 & 313               & 281 & 0,093 & 281,0 \\
+11      & 3333       & 20                & 7 & 304               & 284 & 0,081 & 270,4 \\
+12      & 3333       & 18                & 7 & 306               & 288 & 0,082 & 274,3 \\
+13      & 3666       &  0                & 9 & 331               & 331 & 0,074 & 269,7 \\
+14      & 3666       & 27                & 9 & 364               & 337 & 0,075 & 274,5 \\
+15      & 4000       & 42                & 9 & 350               & 308 & 0,068 & 273,8 \\
+16      & 4000       & 50                & 9 & 360               & 310 & 0,069 & 275,6 \\
+17      & 4333       & 33                & 10 & 345               & 312 & 0,062 & 270,4 \\
+18      & 4333       & 32                & 10 & 349               & 317 & 0,063 & 274,7 \\
+19      & 4666       & 11                & 11 & 331               & 320 & 0,058 & 271,5 \\
+20      & 4666       & 10                & 11 & 332               & 322 & 0,059 & 273,2
+\end{tabular}
+\end{table}
 \subsection{Fehlerrechnung}
+
 \subsection{Ergebnisdiskussion}
+
+\end{document}
