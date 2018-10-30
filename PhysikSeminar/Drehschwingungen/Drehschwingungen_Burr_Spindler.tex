@@ -143,8 +143,18 @@ wie sich unterschiedliche Erregerfrequenzen auf das Pendel auswirken.
     \includegraphics[width=0.75\textwidth]{800px-Pohlsches_Rad}
 \end{figure}
 
-In Versuch 2.1 haben wir durch probieren festgestellt, dass der optimale Phasenwinkel bei etwa 105$\degree$ liegt. 
+In Versuch 2.1 haben wir durch probieren festgestellt, dass der optimale Phasenwinkel bei etwa 10$\degree$ liegt. 
 \subsection{Messwerte und Ergebnisse}
+Messung der Phasendauer bei optimaler Amplitude:\\
+\begin{tabular}{l|l|l}
+Messung &Phasendauer ($s$)&Phasenwinkel ($\degree$)\\\hline
+1&0.55&100.20\\
+2&0.549&100.02\\
+3&0.548&99.84\\
+4&0.546&99.47\\
+Mittelwert&0.548&99.88\\
+\end{tabular}
+
 Dämpfungsspannung von 2V:\\
 \begin{tabular}{l|l|l|l|l|l}
 Messung &F ($\frac{1}{10s}$)&Phasendifferenz ($ms$)&Phasendifferenz ($\degree$)&T ($ms$)&Amplitude ($cm$)\\\hline
@@ -153,7 +163,7 @@ Messung &F ($\frac{1}{10s}$)&Phasendifferenz ($ms$)&Phasendifferenz ($\degree$)&
 3&43&295&49.6&2143&11\\
 4&44&575&99.2&2086&15.2\\
 5&45&945&176.0&1932&6.6\\
-6&47&920&178.2&1859&2.9\\\\
+6&47&920&178.2&1859&2.9\\
 \end{tabular}
 
 Dämpfungsspannung von 4V:\\
@@ -165,12 +175,17 @@ Messung &F ($\frac{1}{10s}$)&Phasendifferenz ($ms$)&Phasendifferenz ($\degree$)&
 4&44&575&99.2&2086&15.2\\
 5&45&625&113.5&1982&4\\
 \end{tabular}
+
+\includegraphics{PhyPr_Dreh_2_2_1.pdf}\\
+\includegraphics{PhyPr_Dreh_2_2_1_2.pdf}\\
+\includegraphics{PhyPr_Dreh_2_2_1_3.pdf}\\
+\includegraphics{PhyPr_Dreh_2_2_1_4.pdf}\\
 \subsection{Fehlerrechnung}
-Da in dieser Messreihe jeweils unterschiedliche Ausgangsbedingungen herrschen, wird eine Fehlerabschätzung schwierig. Jedoch entstehen Fehler vorallem durch unzureichende Eichung des Gerätes und der Ungenauigkeiten beim Ablesen (im Millimeterbereich).
+
+Hier entstehen Fehler vorallem durch unzureichende Eichung des Gerätes und der Ungenauigkeiten beim Ablesen (im Millimeterbereich).
 
 \subsection{Ergebnisdiskussion}
-Wir stellen fest, dass die Phasendifferenz einen großen Einfluss auf die Amplitude hat, und das diese abhängig von der jeweiligen Erregerfrequenz sind. So verhält sich die Schwingung des Pendels bei extrem niedriger Erregerfrequenz so, wie ein normales nicht angeregtes Pendel. Bei gleicher Erregerfrequenz und Eigenfrequenz kommt es zu konstruktiver Resonanz. Bei einer viel höheren Erregerfrequenz als die Eigenfrequenz konnten wir destruktive Resonanz beobachten. 
-
+Wir stellen fest, dass die Phasendifferenz einen großen Einfluss auf die Amplitude hat, und das diese abhängig von der jeweiligen Erregerfrequenz sind. So verhält sich die Schwingung des Pendels bei extrem niedriger Erregerfrequenz so, wie ein normales nicht angeregtes Pendel. Bei gleicher Erregerfrequenz und Eigenfrequenz kommt es zu konstruktiver Resonanz. Bei einer viel höheren Erregerfrequenz als die Eigenfrequenz konnten wir Auslöschung beobachten. Zu beobachten ist ausserdem, dass die Menge an Messungen in diesem Versuch eher mager ausgefallen ist, und daher haben wir höhere Ungenauigkeiten vor allem sichtbar in den Graphen.
 
 \section{Versuch 3: Computersimulation}
 \subsection{Versuchsdurchführung}
@@ -188,7 +203,7 @@ Da das Speichern der Amplituden- und Phasenkurven aus unerklärlichen Gründen n
 \begin{figure}[h]
   \caption{Amplitude und Phasenwinkel abhängig von der Dämpfung (aus der Versuchsanleitung)}
   \centering
-    \includegraphics[width=0.5\textwidth]{phasenkurve.png}
+    \includegraphics[width=0.5\textwidth]{phasenkurve.PNG}
 \end{figure}
 Wie man der oberen Kurve entnehmen kann, steigt die Amplitudenkurve $x_{0}(\omega)$ und damit die Resonanzamplitude $x_{0,max}$ mit abnehmender Dämpfungskonstante $\beta$.
 
@@ -199,7 +214,8 @@ Für das Federpendels ergibt sich mit obiger Formel, der Resonanzfrequenz $\omeg
 \begin{figure}[h]
   \caption{Infrarotspektrum des Acetophenon-Moleküls}
   \centering
-    \includegraphics[width=0.75\textwidth]{acetophenon.png}
+    \includegraphics[width=0.75\textwidth]{acetophenon.PNG}
 \end{figure}
 Im Infrarotspektrum des Acetophenon-Moleküls erkennt man charakteristische Peaks nach unten. Das bedeutet, an diesen speziellen Strahlungsfrequenzen ist die Durchlässigkeit der Strahlung nahezu Null, aber benachbarte Frequenzen gewähren wieder eine hohe Durchlässigkeit. Hierbei handelt es sich um die Resonanzfrequenzen der Molekülbausteine, also kann an diesen Stellen des Spektrums besonders viel Strahlung absorbiert und gestreut werden. Es existieren mehrere solche Resonanzfrequenzen im Spektrum, da alle Kombinationen von Bindungen im Molekül schwingen können und das Molekül aus verschiedenen Atomen besteht.
+
 \end{document}

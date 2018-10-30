@@ -1,16 +1,14 @@
-\contentsline {section}{\numberline {1}Einleitung}{3}
-\contentsline {section}{\numberline {2}Versuch 1: Frequenz und D\IeC {\"a}mpfung der freien Schwingung}{3}
-\contentsline {subsection}{\numberline {2.1}Versuchsdurchf\IeC {\"u}hrung}{3}
-\contentsline {subsection}{\numberline {2.2}Messwerte und Ergebnisse}{3}
-\contentsline {subsection}{\numberline {2.3}Fehlerrechnung}{3}
-\contentsline {subsection}{\numberline {2.4}Ergebnisdiskussion}{3}
-\contentsline {section}{\numberline {3}Versuch 2: Erzwungene Schwingungen}{3}
-\contentsline {subsection}{\numberline {3.1}Versuchsdurchf\IeC {\"u}hrung}{3}
-\contentsline {subsection}{\numberline {3.2}Messwerte und Ergebnisse}{3}
-\contentsline {subsection}{\numberline {3.3}Fehlerrechnung}{3}
-\contentsline {subsection}{\numberline {3.4}Ergebnisdiskussion}{3}
-\contentsline {section}{\numberline {4}Versuch 3: Computersimulation}{3}
-\contentsline {subsection}{\numberline {4.1}Versuchsdurchf\IeC {\"u}hrung}{3}
-\contentsline {subsection}{\numberline {4.2}Messwerte und Ergebnisse}{3}
-\contentsline {subsection}{\numberline {4.3}Fehlerrechnung}{3}
-\contentsline {subsection}{\numberline {4.4}Ergebnisdiskussion}{3}
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}
+\contentsline {section}{\numberline {2}Versuch 1: Frequenz und D\IeC {\"a}mpfung der freien Schwingung}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Versuchsdurchf\IeC {\"u}hrung}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Messwerte und Ergebnisse}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Fehlerrechnung}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Ergebnisdiskussion}{5}{subsection.2.4}
+\contentsline {section}{\numberline {3}Versuch 2: Erzwungene Schwingungen}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Versuchsdurchf\IeC {\"u}hrung}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Messwerte und Ergebnisse}{6}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Fehlerrechnung}{8}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Ergebnisdiskussion}{8}{subsection.3.4}
+\contentsline {section}{\numberline {4}Versuch 3: Computersimulation}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Versuchsdurchf\IeC {\"u}hrung}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Ergebnis und Diskussion}{9}{subsection.4.2}
