@@ -121,7 +121,16 @@ Messung & $f$ {[}Hz{]} & $x_{0}$ [mm] & n & $x_{n}$ [mm] & $d$ [mm]   & $\lambda
 \end{tabular}
 \end{table}
 \subsection{Fehlerrechnung}
-
+\begin{align*}
+\Delta d = \left| \dfrac{\partial d}{\partial x_{n}} \right| \Delta x_{n} + \left| \dfrac{\partial d}{\partial x_{0}} \right| \Delta x_{0} = \left| 1 \right| \Delta x_{n} + \left| -1 \right| \Delta x_{0} = \Delta x_{n} + \Delta x_{0} \\
+\end{align*}
+\begin{align*}
+\Delta \lambda = \left| \dfrac{\partial \lambda}{\partial d} \right| \Delta d + \left| \dfrac{\partial \lambda}{\partial n} \right| \Delta n = \left| \dfrac{2}{n} \right| (\Delta x_{n} + \Delta x_{0}) + \left| - \dfrac{2d}{n^2} \right| \Delta n = \\
+\dfrac{2}{n} \Delta x_{n} + \dfrac{2}{n} \Delta x_{0} + \dfrac{2d}{n^2} \Delta n = \dfrac{2}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{d}{n} \Delta n) = \dfrac{2}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{x_{n} - x_{0}}{n} \Delta n)
+\end{align*}
+\begin{align*}
+\Delta c = \left| \dfrac{\partial c}{\partial \lambda} \right| \Delta \lambda = \left| f \right| \Delta \lambda = \dfrac{2f}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{x_{n} - x_{0}}{n} \Delta n)
+\end{align*}
 \subsection{Ergebnisdiskussion}
 
 \end{document}
