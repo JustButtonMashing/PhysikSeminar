@@ -231,4 +231,62 @@ E = c_{S}^2 \rho = 3550^2 \cdot 8440 \cdot \dfrac{m^2}{s^2} \dfrac{kg}{m^3} = 1,
 Der hier bestimmte Wert $c_{S}$ für die Schallgeschwindigkeit in Messing überschreitet den Literaturwert  von 3530 m/s auf der Versuchsanleitung um 0,6 \%. Das bedeutet, der Mittelwert für $c_{L}$ kommt der Realität ziemlich nahe und die Messungen 3, 4, 5, 7, die diesem entsprechen, waren am genauesten. Fehler bei den anderen Messungen lassen sich durch schlechter ausgeprägte Wellenmuster im Staub und ungenaues Ablesen erklären. 
 
 Der berechnete Wert für $E$ ist mit einer Unterschreitung des Literaturwerts von 110 GPa um 3,6 \% auch relativ realitätsnah und ist wahrscheinlich auf das Vernachlässigen der Temperaturabhängigkeit der Dichte $\rho$ zurückzuführen.
+
+
+\section{Versuch 3: Direkte Messung der Schallgeschwindigkeit in Luft}
+\subsection{Versuchsdurchführung}
+In diesem Versuch wird per Frequenzgenerator eine Frequenz erzeugt, welche am Lautsprecher ein akustisches Signal erzeugt. Ein Mikrofon auf einer Schiene registriert das Signal. Beide Signale - die des Frequenzgenerators und die des Mikrophons - werden mittels Oszilloskop angezeigt. 
+Versetzt man nun das Mikrofon, sieht man am Oszilloskop wie sich die Welle verschiebt.
+Mittels Gleichung (7) kann man die Schallgeschwindigkeit ermitteln
+\subsection{Messwerte und Ergebnisse}
+\begin{table}[h]
+\begin{tabular}{l|l|l|l|l}
+Messung & Distanz $[cm]$ & Anzahl Perioden & Frequenz $[hz]$ & Wellenlänge $[cm]$ \\ \hline
+1       & 24.0          & 4 & 6000 & 6.00\\
+2       & 22.1          & 4 & 6500 & 5.53\\
+3       & 25.1          & 5 & 7000 & 5.02\\
+4       & 21.1          & 4 & 7500 & 5.23\\
+5       & 18.2          & 4 & 8000 & 4.55\\
+6       & 16.8          & 4 & 8500 & 4.20\\
+7       & 20.7          & 5 & 9000 & 4.14\\
+\end{tabular}
+\end{table}
+\includegraphics[width=1\textwidth]{Versuch3_dia.png}
+Mit (5) resultiert, dass die Schallgeschwindigkeit im Mittel $365$ Meter pro Sekunde beträgt.
+\subsection{Ergebnisdiskussion}
+Der hier Bestimmte Wert für die Schallgeschwindigkeit in Luft weicht im  Vergleich mit dem Literaturwert von $343 \frac{m}{s}$ um ganze $22\frac{m}{s}$ ab. Dies wird vor allem an Messfehlern beim Ablesen liegen.
+\section{Versuch 4: Messung der Schallgeschwindigkeit mittels Frequenzanalyse}
+\subsection{Versuchsdurchführung}
+Wie in Versuch 2 beschrieben, wird hier ein Messingstab in Schwingung versetzt. Dies wird mit einem Mikrofon gemessen und im Oszilloskop mittels dem "Fast Fourier Transformation" Modus visualisiert. Zu sehen ist nun das Frequenzspektrum des Signals. Wir lesen die Frequenz der einzelnen dargestellten Peaks ab und erhalten dadurch die Frequenzen der verschiedenen Schwingungsmoden. Durch Gleichung (13) kann die Schallgeschwindigkeit ermittelt werden.\begin{align}
+V_{Schall} = f \cdot d_{Knoten}
+\end{align}
+\subsection{Messwerte und Ergebnisse}
+\begin{table}[h]
+\begin{tabular}{l|l}
+Peak Nummer &	Frequenz $[hz]$\\ \hline
+1			&	2200\\
+2			&	4400\\
+3			&	6600\\
+4			&	8800\\
+5			&	111000\\
+6			&	132000\\
+\end{tabular}
+\end{table}
+Skizze der n-ten Harmonischen:\\
+\includegraphics[width=1\textwidth]{Versuch4_skizze.pdf}\\
+
+\begin{table}[h]
+Auswertung der Schallgeschwindigkeit mithilfe von (11):
+\begin{tabular}{l|l|l|l}
+n-te Harmonische &	Distanz $[m]$ & Frequenz $[hz]$&Schallgeschwindigkeit $[\frac{m}{s}]$\\ \hline
+1			&	1.6		&	2200	&	 3520\\
+2			&	0.8		&	4400	&	 3520\\
+3			&	0.533	& 	6600	&	3520\\
+4			&	0.4		& 	8800	&	3520\\
+
+\end{tabular}
+\end{table}
+\subsection{Ergebnisdiskussion}
+Die Schallgeschwindigkeit in Messing beträgt nach diesen Messungen $3520\frac{m}{s}$. Somit unterschreitet dies den Literaturwert von $3530\frac{m}{s}$ um $0.3\%$. Also kommt der gemessene Wert dem Literaturwert sehr nahe.
+
 \end{document}
