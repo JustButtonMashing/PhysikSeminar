@@ -9,6 +9,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{gensymb}
+\usepackage{amssymb}
 
 \title{Physikpraktikum für Naturwissenschaftler \\ Versuch: Schallwellen}
 \author{Felix Burr, Johannes Spindler (Gruppe 13)}
@@ -57,13 +58,13 @@ Ziel des Versuches ist es, mithilfe eines Quincke'schen Resonanzrohres die Schal
 Der Versuchsaufbau sieht folgendermaßen aus: Ein Lautsprecher ist an einen Frequenzgenerator angeschlossen und ist über einem oben offenen Glasrohr angebracht. Innerhalb des Glasrohrs befindet sich ein vertikal beweglicher Stempel mit einem Mikrofon. Das Mikrofon ist an ein Voltmeter angeschlossen. Am Rohr kann an einer Millimeter-Skala die Position des Stempels abgelesen werden.
 
 Zuerst suchen wir die tiefstmögliche Stempelposition $x_{0}$, an der das Voltmeter maximal ausschlägt. Dann verschieben wir den Stempel bis zu einem Maximum an Position $x_{n}$, die möglichst nahe am oberen Rohrende liegt. Wir zählen dabei die Anzahl $n$ der zurückgelegten Maximumsabstände. Der Abstand $d = x_{n} - x_{0}$ entspricht dann der $n$-fachen Halbwellenlänge. Also berechnen wir daraus die Wellenlänge $\lambda$:
-\begin{align*}
+\begin{align}
 \lambda = 2 \dfrac{d}{n} =  2 \dfrac{x_{n}-x_{0}}{n}\\
-\end{align*}
+\end{align}
 Anschließend können wir aus der Wellenlänge und der von uns eingestellten Frequenz $f$ die Schallgeschwindigkeit $c$ berechnen:
-\begin{align*}
+\begin{align}
 c = \lambda f
-\end{align*}
+\end{align}
 \subsection{Messwerte und Ergebnisse}
 \subsubsection{Im Medium Luft}
 \begin{table}[h]
@@ -133,4 +134,64 @@ Messung & $f$ {[}Hz{]} & $x_{0}$ [mm] & n & $x_{n}$ [mm] & $d$ [mm]   & $\lambda
 \end{align*}
 \subsection{Ergebnisdiskussion}
 
+
+\section{Versuch 2: Schallgeschwindigkeit in einem Messingstab}
+\subsection{Versuchsdurchführung}
+Mit einem Kundt'schen Staubrohr wird die Schallgeschwindigkeit $c$ in einem Messingstab und daraus das Elastizitätsmodul $E$ des Stabs berechnet.
+
+Beim Kundt'schen Staubrohr handelt es sich um ein mit etwas Korkmehl gefülltes Glasrohr, das auf einer Seite mit einem beweglichen Stempel geschlossen ist und in dessen andere Seite ein Messingstab ragt. Der Stab ist an zwei Punkten über dem Tisch eingespannt
+
+Der Stempel wird nun so eingestellt, dass für die Länge $l$ und die Wellenlänge $\lambda$ der Luftsäule zwischen Ende des Messingstabs und Stempel gilt:
+\begin{align}
+l = n  \cdot \frac{\lambda}{2}, n \in N
+\end{align}
+Selbiges muss für den Messingstab gelten, wobei $l$ dann der Abstand zwischen den Einspannpunkten und $\lambda$ die Länge und gleichzeitig Wellenlänge des Stabs ist. Also werden die Einspannpunkte bei einer viertel Stablänge und bei einer dreiviertel Stablänge gewählt.
+Wird mit einem ethanolbefeuchteten Tuch am Stab gerieben, schwingt dieser mit der Frequenz $f = f_{Stab} = f_{Luft}$, die sich auf die Luftsäule überträgt. Mit 
+\begin{align}
+f = \dfrac{c}{\lambda}
+\end{align}
+ergibt sich folgender Zusammenhang zwischen Stab und Luft:
+\begin{align}
+\dfrac{c_{Stab}}{\lambda_{Stab}} = \dfrac{c_{Luft}}{\lambda_{Luft}}
+\end{align}
+Durch die Schwingung der Luftsäule formt der Staub im Rohr ein Wellenmuster, wobei der Abstand zweier Wellenbäuche gerade $\lambda_{L} / 2$ beträgt. 
+Es wird in mehreren Messungen also der Stab zum Schwingen angeregt, dann wird die Anzahl $b$ sichtbarer Wellenbäuche im Staub und der Abstand $x$ zwischen erstem und letztem Wellenbauch ermittelt und $\lambda_{L}$ berechnet:
+\begin{align}
+\dfrac{\lambda_{L}}{2} = \dfrac{x}{b-1}
+\end{align}
+$\lambda_{S}$ entspricht gerade der Länge des Stabs und $c_{L}$ erhält man, abhängig von der Raumtemperatur $\vartheta$ durch
+\begin{align}
+c_{L} = c_{L, 0} \cdot \sqrt{1+\dfrac{\vartheta}{273,2 \degree C}} = 331 \dfrac{m}{s} \cdot \sqrt{1+\dfrac{\vartheta}{273,2 \degree C}}
+\end{align}
+Damit sind alle Größen bekannt, um $c_{S}$ mit (6) zu berechnen. Für das Elastizitätsmodul gilt dann:
+\begin{align}
+c_{S} = \sqrt{\dfrac{E}{\rho}} \\
+E = c_{S}^2 \rho
+\end{align}
+Die Temperaturabhängigkeit der Dichte $\rho$ des Messings kann bei Metallen vernachlässigt werden.
+\subsection{Messwerte und Ergebnisse}
+\begin{table}[h]
+\begin{tabular}{l|l|l|l}
+Messung & $b$ & $x$ [m] & $\lambda_{L}$ [m]      \\
+\hline
+1       & 4            & 0,32    & 0,107 \\
+2       & 6            & 0,39    & 0,078 \\
+3       & 4            & 0,31    & 0,103 \\
+4       & 4            & 0,31    & 0,103 \\
+5       & 4            & 0,31    & 0,103 \\
+6       & 3            & 0,26    & 0,130 \\
+7       & 4            & 0,31    & 0,103 \\
+8       & 3            & 0,24    & 0,120 \\
+\hline
+Mittelwert & & & 0,106
+\end{tabular}
+\end{table}
+Gemessene Raumtemperatur $\vartheta = 22,9\degree C$,
+
+daraus folgt $c_{L} = 331 \dfrac{m}{s} \cdot \sqrt{1+\dfrac{22,9\degree C}{273,2 \degree C}} = 344 \dfrac{m}{s}$.
+
+Stablänge $\lambda_{S} = 1m$.
+
+Also $c_{S} = \dfrac{c_{L}}{\lambda_{L}} \cdot \lambda_{S} = \dfrac{344\dfrac{m}{s}}{0,106m} \cdot 1m = 3245 \dfrac{m}{s}$
+Mit dem Wert $\rho = 8,44 g/cm^3 = 
 \end{document}
