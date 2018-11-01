@@ -49,7 +49,11 @@
 \pagebreak
 
 \section{Einleitung}
+Schallwellen sind uns aus dem Alltag wohlbekannt. Als menschliche Stimme werden sie im Kehlkopf geformt, physikalisch betrachtet ist der Luftdruck hier die Größe, die sich zeitlich und örtlich periodisch ändert. Mit dem Ohr kann diese Druckänderung wahrgenommen und im Gehirn verarbeitet werden.
 
+Die Entfernung eines Blitzeinschlags kann auch einfach abgeschätzt werden, wenn die Schallgeschwindigkeit in Luft bekannt ist: Ist der Einschlag einen Kilometer entfernt, verstreichen drei Sekunden zwischen Blitz und Donner.
+
+Grund genug, sich dem interessanten Phänomen der Schallwellen zu widmen.
 \section{Versuch 1: Schallgeschwindigkeiten in Gasen (Luft und $CO_{2}$)}
 \subsection{Versuchsdurchführung}
 Ziel des Versuches ist es, mithilfe eines Quincke'schen Resonanzrohres die Schallgeschwindigkeiten in Luft und $CO_{2}$ und daraus den Adiabatenexponenten in $CO_{2}$ zu berechnen.
@@ -57,17 +61,27 @@ Ziel des Versuches ist es, mithilfe eines Quincke'schen Resonanzrohres die Schal
 
 Der Versuchsaufbau sieht folgendermaßen aus: Ein Lautsprecher ist an einen Frequenzgenerator angeschlossen und ist über einem oben offenen Glasrohr angebracht. Innerhalb des Glasrohrs befindet sich ein vertikal beweglicher Stempel mit einem Mikrofon. Das Mikrofon ist an ein Voltmeter angeschlossen. Am Rohr kann an einer Millimeter-Skala die Position des Stempels abgelesen werden.
 
-Zuerst suchen wir die tiefstmögliche Stempelposition $x_{0}$, an der das Voltmeter maximal ausschlägt. Dann verschieben wir den Stempel bis zu einem Maximum an Position $x_{n}$, die möglichst nahe am oberen Rohrende liegt. Wir zählen dabei die Anzahl $n$ der zurückgelegten Maximumsabstände. Der Abstand $d = x_{n} - x_{0}$ entspricht dann der $n$-fachen Halbwellenlänge. Also berechnen wir daraus die Wellenlänge $\lambda$:
+Zuerst wird die tiefstmögliche Stempelposition $x_{0}$ gesucht, an der das Voltmeter maximal ausschlägt. Dann wird der Stempel bis zu einem Maximum an Position $x_{n}$ geschoben, die möglichst nahe am oberen Rohrende liegt. Dabei wird die Anzahl $n$ der zurückgelegten Intervalle zwischen Maxima gezählt. Der Abstand $d = x_{n} - x_{0}$ entspricht dann der $n$-fachen Halbwellenlänge. Daraus kann die Wellenlänge $\lambda$ berechnet werden:
 \begin{align}
 \lambda = 2 \dfrac{d}{n} =  2 \dfrac{x_{n}-x_{0}}{n}\\
 \end{align}
-Anschließend können wir aus der Wellenlänge und der von uns eingestellten Frequenz $f$ die Schallgeschwindigkeit $c$ berechnen:
+Die Wellenlänge und die eingestellte Frequenz $f$ führt zur Schallgeschwindigkeit $c$:
 \begin{align}
 c = \lambda f
 \end{align}
+Bei der Bestimmung der Schallgeschwindigkeit in $CO_{2}$ wird genauso vorgegangen, mit dem Unterschied das über einen seitlichen Anschluss am Glasrohr vor den Messungen $CO_{2}$ eingeleitet wird. Zwischen den Messungen muss immer wieder etwas $CO_{2}$ nachgefüllt werden um Verluste auszugleichen.
+
+Nun wird die Zimmertemperatur gemessen, um die (temperaturabhängige) Dichte $\rho$ des $CO_{2}$ zu bestimmen:
+\begin{align}
+\rho = \dfrac{\rho_{0}}{1 + \dfrac{\vartheta}{273,2 \degree C}} = \dfrac{1,9768 \dfrac{kg}{m^3}}{1 + \dfrac{\vartheta}{273,2 \degree C}}
+\end{align}
+Mit diesem Wert und dem gemessenen Umgebungsdruck $p$ erhält man schließlich den Adiabatenexponenten $\kappa$ von $CO_{2}$:
+\begin{align}
+\kappa = \dfrac{c^2 \cdot \rho}{p}
+\end{align}
 \subsection{Messwerte und Ergebnisse}
 \subsubsection{Im Medium Luft}
-\begin{table}[h]
+\begin{table}[h!]
 \begin{tabular}{l|l|l|l|l|l|l|l}
 Messung & $f$ {[}Hz{]} & $x_{0}$ [mm] & n & $x_{n}$ [mm] & $d$ [mm]   & $\lambda$ [m]      & $c$ [m/s]      \\
 \hline
@@ -90,12 +104,15 @@ Messung & $f$ {[}Hz{]} & $x_{0}$ [mm] & n & $x_{n}$ [mm] & $d$ [mm]   & $\lambda
 17      & 4333       & 17                & 8 & 338               & 321 & 0,080 & 347,7 \\
 18      & 4333       & 16                & 8 & 340               & 324 & 0,081 & 351,0 \\
 19      & 4666       & 27                & 8 & 321               & 294 & 0,074 & 343,0 \\
-20      & 4666       & 26                & 8 & 324               & 298 & 0,075 & 347,6
+20      & 4666       & 26                & 8 & 324               & 298 & 0,075 & 347,6 \\
+\hline
+Mittelwert & & & & & & & 345,4
 \end{tabular}
 \end{table}
 
+\newpage
 \subsubsection{Im Medium $CO_{2}$}
-\begin{table}[h]
+\begin{table}[h!]
 \begin{tabular}{l|l|l|l|l|l|l|l}
 Messung & $f$ {[}Hz{]} & $x_{0}$ [mm] & n & $x_{n}$ [mm] & $d$ [mm]   & $\lambda$ [m]      & $c$ [m/s]      \\
 \hline
@@ -118,9 +135,19 @@ Messung & $f$ {[}Hz{]} & $x_{0}$ [mm] & n & $x_{n}$ [mm] & $d$ [mm]   & $\lambda
 17      & 4333       & 33                & 10 & 345               & 312 & 0,062 & 270,4 \\
 18      & 4333       & 32                & 10 & 349               & 317 & 0,063 & 274,7 \\
 19      & 4666       & 11                & 11 & 331               & 320 & 0,058 & 271,5 \\
-20      & 4666       & 10                & 11 & 332               & 322 & 0,059 & 273,2
+20      & 4666       & 10                & 11 & 332               & 322 & 0,059 & 273,2 \\
+\hline
+Mittelwert & & & & & & & 275,3
 \end{tabular}
 \end{table}
+Gemessene Raumtemperatur $\vartheta = 22,9\degree C$, daraus folgt 
+\begin{align*}
+\rho =  \dfrac{1,9768 \dfrac{kg}{m^3}}{1 + \dfrac{22,9\degree C}{273,2 \degree C}} = 1,8239 \dfrac{kg}{m^3}.
+\end{align*}
+Gemessener Luftdruck $p = 951 mBar = 95100 Pa$.
+\begin{align*}
+\kappa = \dfrac{c^2 \cdot \rho}{p} = \dfrac{(275,3 \dfrac{m}{s} \cdot 1,8239 \dfrac{kg}{m^3}}{95100 Pa} = 1,45 \dfrac{\dfrac{kg}{ms^2}}{Pa} = 1,45 \dfrac{\dfrac{N}{m^2}}{Pa} = 1,45
+\end{align*}
 \subsection{Fehlerrechnung}
 \begin{align*}
 \Delta d = \left| \dfrac{\partial d}{\partial x_{n}} \right| \Delta x_{n} + \left| \dfrac{\partial d}{\partial x_{0}} \right| \Delta x_{0} = \left| 1 \right| \Delta x_{n} + \left| -1 \right| \Delta x_{0} = \Delta x_{n} + \Delta x_{0} \\
@@ -133,8 +160,9 @@ Messung & $f$ {[}Hz{]} & $x_{0}$ [mm] & n & $x_{n}$ [mm] & $d$ [mm]   & $\lambda
 \Delta c = \left| \dfrac{\partial c}{\partial \lambda} \right| \Delta \lambda = \left| f \right| \Delta \lambda = \dfrac{2f}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{x_{n} - x_{0}}{n} \Delta n)
 \end{align*}
 \subsection{Ergebnisdiskussion}
-
-
+In Versuch 2 wurde die Schallgeschwindigkeit in Luft bei der gemessenen Raumtemperatur per Formel berechnet, dies ergab $344 \dfrac{m}{s}$
+Für die Geschwindigkeit in $CO_{2}$ kann laut Anleitung $266 \dfrac{m}{s}$ als Vergleichswert herangezogen werden.
+Man erkennt, dass die Messung in Luft sehr nahe am Formelwert ist (0,4 \% Abweichung), während die Messung in $CO_{2}$ mit 3,5 \% etwas stärker abweicht. Der Grund hierfür ist, dass beim Verschieben des Stempels nach oben und anschließendem Zurückschieben nach unten ein Unterdruck in der Glasröhre entsteht und dadurch Luft angesaugt wird. Außerdem verschließt der Stempel den unteren Rohrausgang nicht völlig luftdicht, weshalb hier etwas $CO_{2}$ ausfließen kann.
 \section{Versuch 2: Schallgeschwindigkeit in einem Messingstab}
 \subsection{Versuchsdurchführung}
 Mit einem Kundt'schen Staubrohr wird die Schallgeschwindigkeit $c$ in einem Messingstab und daraus das Elastizitätsmodul $E$ des Stabs berechnet.
@@ -155,9 +183,9 @@ ergibt sich folgender Zusammenhang zwischen Stab und Luft:
 \dfrac{c_{Stab}}{\lambda_{Stab}} = \dfrac{c_{Luft}}{\lambda_{Luft}}
 \end{align}
 Durch die Schwingung der Luftsäule formt der Staub im Rohr ein Wellenmuster, wobei der Abstand zweier Wellenbäuche gerade $\lambda_{L} / 2$ beträgt. 
-Es wird in mehreren Messungen also der Stab zum Schwingen angeregt, dann wird die Anzahl $b$ sichtbarer Wellenbäuche im Staub und der Abstand $x$ zwischen erstem und letztem Wellenbauch ermittelt und $\lambda_{L}$ berechnet:
+Es wird in mehreren Messungen also der Stab zum Schwingen angeregt, dann wird die Anzahl $b$ der sichtbaren Halbwellenlängen im Staub (das Intervall zwischen zwei Wellenbäuchen ist eine Halbwellenlänge) und der Abstand $x$ zwischen erstem und letztem erkennbaren Wellenbauch ermittelt und $\lambda_{L}$ berechnet:
 \begin{align}
-\dfrac{\lambda_{L}}{2} = \dfrac{x}{b-1}
+\dfrac{\lambda_{L}}{2} = \dfrac{x}{b}
 \end{align}
 $\lambda_{S}$ entspricht gerade der Länge des Stabs und $c_{L}$ erhält man, abhängig von der Raumtemperatur $\vartheta$ durch
 \begin{align}
@@ -168,30 +196,39 @@ Damit sind alle Größen bekannt, um $c_{S}$ mit (6) zu berechnen. Für das Elas
 c_{S} = \sqrt{\dfrac{E}{\rho}} \\
 E = c_{S}^2 \rho
 \end{align}
-Die Temperaturabhängigkeit der Dichte $\rho$ des Messings kann bei Metallen vernachlässigt werden.
+Die Temperaturabhängigkeit der Dichte $\rho$ der Messinglegierung kann bei Metallen vernachlässigt werden.
 \subsection{Messwerte und Ergebnisse}
 \begin{table}[h]
 \begin{tabular}{l|l|l|l}
 Messung & $b$ & $x$ [m] & $\lambda_{L}$ [m]      \\
 \hline
-1       & 4            & 0,32    & 0,107 \\
-2       & 6            & 0,39    & 0,078 \\
-3       & 4            & 0,31    & 0,103 \\
-4       & 4            & 0,31    & 0,103 \\
-5       & 4            & 0,31    & 0,103 \\
-6       & 3            & 0,26    & 0,130 \\
-7       & 4            & 0,31    & 0,103 \\
-8       & 3            & 0,24    & 0,120 \\
+1       & 4            & 0,32    & 0,160 \\
+2       & 6            & 0,39    & 0,130 \\
+3       & 4            & 0,31    & 0,155 \\
+4       & 4            & 0,31    & 0,155 \\
+5       & 4            & 0,31    & 0,155 \\
+6       & 3            & 0,26    & 0,173 \\
+7       & 4            & 0,31    & 0,155 \\
+8       & 3            & 0,24    & 0,160 \\
 \hline
-Mittelwert & & & 0,106
+Mittelwert & & & 0,155
 \end{tabular}
 \end{table}
 Gemessene Raumtemperatur $\vartheta = 22,9\degree C$,
 
 daraus folgt $c_{L} = 331 \dfrac{m}{s} \cdot \sqrt{1+\dfrac{22,9\degree C}{273,2 \degree C}} = 344 \dfrac{m}{s}$.
 
-Stablänge $\lambda_{S} = 1m$.
+Stablänge $\lambda_{S} = 1,60m$.
 
-Also $c_{S} = \dfrac{c_{L}}{\lambda_{L}} \cdot \lambda_{S} = \dfrac{344\dfrac{m}{s}}{0,106m} \cdot 1m = 3245 \dfrac{m}{s}$
-Mit dem Wert $\rho = 8,44 g/cm^3 = 
+Also $c_{S} = \dfrac{c_{L}}{\lambda_{L}} \cdot \lambda_{S} = \dfrac{344\dfrac{m}{s}}{0,155m} \cdot 1,60m = 3550 \dfrac{m}{s}$
+
+Mit dem Wert $\rho = 8,44 \dfrac{g}{cm^3} = 8,44 \dfrac{10^{-3} kg}{10^{-6} m^3} = 8440 \dfrac{kg}{m^3}$ aus der Versuchsanleitung \\ kann das Elastizitätsmodul $E$ berechnet werden:
+\begin{align*}
+E = c_{S}^2 \rho = 3550^2 \cdot 8440 \cdot \dfrac{m^2}{s^2} \dfrac{kg}{m^3} = 1,06 \cdot 10^{11} \dfrac{kg}{ms^2} = 1,06 \cdot 10^{11} \dfrac{N}{m^2} = 106 GPa
+\end{align*}
+
+\subsection{Ergebnisdiskussion}
+Der hier bestimmte Wert $c_{S}$ für die Schallgeschwindigkeit in Messing überschreitet den Literaturwert  von 3530 m/s auf der Versuchsanleitung um 0,6 \%. Das bedeutet, der Mittelwert für $c_{L}$ kommt der Realität ziemlich nahe und die Messungen 3, 4, 5, 7, die diesem entsprechen, waren am genauesten. Fehler bei den anderen Messungen lassen sich durch schlechter ausgeprägte Wellenmuster im Staub und ungenaues Ablesen erklären. 
+
+Der berechnete Wert für $E$ ist mit einer Unterschreitung des Literaturwerts von 110 GPa um 3,6 \% auch relativ realitätsnah und ist wahrscheinlich auf das Vernachlässigen der Temperaturabhängigkeit der Dichte $\rho$ zurückzuführen.
 \end{document}
