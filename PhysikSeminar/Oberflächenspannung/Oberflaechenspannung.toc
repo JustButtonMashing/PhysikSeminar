@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Einleitung}{3}{section.1}
+\contentsline {section}{\numberline {2}Oberfl\IeC {\"a}chenspannung von Wasser, Ethanol und Kochsalzl\IeC {\"o}sung (Abrei\IeC {\ss }methode)}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Versuchsdurchf\IeC {\"u}hrung}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Messwerte und Ergebnisse}{3}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Messungen bei Wasser}{3}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Messungen bei Ethanol}{3}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Messungen bei Kochsalzl\IeC {\"o}sung}{4}{subsubsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3}Fehlerrechnung}{4}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Standardabweichung und Gr\IeC {\"o}\IeC {\ss }tfehler von $\sigma $ bei Wasser}{4}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Standardabweichung und Gr\IeC {\"o}\IeC {\ss }tfehler von $\sigma $ bei Ethanol}{4}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Standardabweichung und Gr\IeC {\"o}\IeC {\ss }tfehler von $\sigma $ bei Kochsalzl\IeC {\"o}sung}{4}{subsubsection.2.3.3}
+\contentsline {subsection}{\numberline {2.4}Ergebnisdiskussion}{5}{subsection.2.4}
+\contentsline {section}{\numberline {3}Oberfl\IeC {\"a}chenspannung von Tensidl\IeC {\"o}sungen}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Versuchsdurchf\IeC {\"u}hrung}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Messwerte und Ergebnisse}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Ergebnisdiskussion}{5}{subsection.3.3}
+\contentsline {section}{\numberline {4}Oberfl\IeC {\"a}chenspannung von Wasser und einer SDS-L\IeC {\"o}sung (Kapillarmethode)}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Versuchsdurchf\IeC {\"u}hrung}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Messwerte und Ergebnisse}{5}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Ergebnisdiskussion}{5}{subsection.4.3}
+\contentsline {section}{\numberline {5}Benetzung von Oberfl\IeC {\"a}chen}{5}{section.5}
+\contentsline {subsection}{\numberline {5.1}Versuchsdurchf\IeC {\"u}hrung}{5}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Messwerte und Ergebnisse}{5}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Ergebnisdiskussion}{5}{subsection.5.3}

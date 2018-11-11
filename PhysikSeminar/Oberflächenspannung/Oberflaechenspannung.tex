@@ -1,0 +1,161 @@
+\documentclass{scrartcl}
+
+\usepackage{german}
+\usepackage[utf8]{inputenc}  %Umlaute
+\usepackage[T1]{fontenc}     %Umlauttrennung
+\usepackage{lmodern}         %modernes Schriftbild
+\usepackage{amsmath}         %math Umgebungen
+\usepackage{graphicx}
+\usepackage{hyperref}        %URLs
+\usepackage{gensymb}         %Gradzeichen
+\usepackage{float}           %Positionierung von Tabellen und Abb
+
+\title{Physikpraktikum für Naturwissenschaftler \\ Versuch: Oberflächenspannung}
+\author{Felix Burr, Johannes Spindler (Gruppe 13)}
+\date{Durchgeführt am 08. November 2018}
+
+
+\begin{document}
+\begin{titlepage}
+  \begin{center}
+    \vspace*{1cm}
+    \LARGE
+    Physikpraktikum für Naturwissenschaftler \\
+    \vspace*{1cm}
+    \Huge
+    \textbf{Versuch: Oberflächenspannung} \\
+    \vspace*{0.3cm}
+    \Large
+    Durchgeführt am 08. November 2018 \\
+    Betreuerin: Sabrina Hartmann \\
+    \vspace*{2.5cm}
+    Gruppe 13 \\
+    Felix Burr: felix.burr@uni-ulm.de \\
+    Johannes Spindler: johannes.spindler@uni-ulm.de \\
+    \vfill 
+  \end{center}
+  Wir bestätigen hiermit, das Protokoll selbstständig erarbeitet zu haben und in genauer Kenntnis über dessen Inhalt zu sein. \\
+  \vspace*{0.8cm}
+  \\
+  Felix Burr
+  \hfill
+  Johannes Spindler
+\end{titlepage}
+\pagebreak
+\tableofcontents
+
+
+\pagebreak
+
+\section{Einleitung}
+
+\section{Oberflächenspannung von Wasser, Ethanol und Kochsalzlösung (Abreißmethode)}
+\subsection{Versuchsdurchführung}
+\begin{align}
+\sigma = \dfrac{\Delta W}{\Delta O}
+\end{align}
+
+\begin{align}
+\Delta W = F \cdot \Delta h
+\end{align}
+
+\begin{align}
+\Delta O = 2A = 2(2 \pi r \cdot \Delta h) = 4 \pi r \cdot \Delta h
+\end{align}
+
+\begin{align}
+\sigma = \dfrac{F \cdot \Delta h}{4 \pi r \cdot \Delta h} = \dfrac{F}{4 \pi r} \label{eq:sigma}
+\end{align}
+\subsection{Messwerte und Ergebnisse}
+\subsubsection{Messungen bei Wasser}
+
+\begin{table}[H]
+\captionof{table}{Kraft $F$ und Oberflächenspannung $\sigma$ bei Wasser}
+\begin{center}
+\begin{tabular}{l|l|l}
+Messung    & $F$ {[}mN{]} & $\sigma$ {[}N/m{]} \\
+\hline
+1          & 24,0       & 0,0588    \\
+2          & 24,0       & 0,0588    \\
+3          & 25,5       & 0,0624    \\
+Mittelwert & 24,5       & 0,0600                    
+\end{tabular}
+\end{center}
+\label{tab:Wasser}
+\end{table}
+\subsubsection{Messungen bei Ethanol}
+
+\begin{table}[H]
+\captionof{table}{Kraft $F$ und Oberflächenspannung $\sigma$ bei Ethanol}
+\begin{center}
+\begin{tabular}{l|l|l}
+Messung    & $F$ {[}mN{]} & $\sigma$ {[}N/m{]} \\
+\hline
+1          & 7,0       & 0,0171    \\
+2          & 7,0       & 0,0171    \\
+3          & 7,0       & 0,0171    \\
+Mittelwert & 7,0       & 0,0171                    
+\end{tabular}
+\end{center}
+\label{tab:Ethanol}
+\end{table}
+\subsubsection{Messungen bei Kochsalzlösung}
+
+\begin{table}[H]
+\captionof{table}{Kraft $F$ und Oberflächenspannung $\sigma$ bei Kochsalzlösung}
+\begin{center}
+\begin{tabular}{l|l|l}
+Messung    & $F$ {[}mN{]} & $\sigma$ {[}N/m{]} \\
+\hline
+1          & 22,0       & 0,0539    \\
+2          & 20,0       & 0,0490    \\
+3          & 19,0       & 0,0465    \\
+Mittelwert & 20,3       & 0,0498                    
+\end{tabular}
+\end{center}
+\label{tab:Kochsalz}
+\end{table}
+\subsection{Fehlerrechnung}
+Aus Gleichung \ref{eq:sigma} folgt für $\sigma$, das von den Messgrößen $F$ und $r$ abhängt, der Größtfehler
+\begin{align*}
+\Delta \sigma = \left| \dfrac{\partial \sigma}{\partial F} \right| \Delta F + \left| \dfrac{\partial \sigma}{\partial r} \right| \Delta r = \left| \dfrac{1}{4 \pi r} \right| \Delta F + \dfrac{F}{4 \pi} \left| - \dfrac{1}{r^2} \right| \Delta r =\dfrac{1}{4 \pi r} \Delta F + \dfrac{F}{4 \pi r^2} \Delta r
+\end{align*}
+Da die Skala auf dem Kraftmesser in Abständen von einem Milli-Newton aufgetragen ist und zum Messen des Ringradius eine Schieblehre verwendet wurde, werden $\Delta F = 1mN, \Delta r = 0,05mm$ als Größtfehler angenommen.
+
+\subsubsection{Standardabweichung und Größtfehler von $\sigma$ bei Wasser}
+Aus Tabelle \ref{tab:Wasser} folgt eine Standardabweichung von 0,0021. Mit den Mittelwerten $F = 24,5mN, \sigma = 0,0600N/m$ ergibt sich der Größtfehler von $\sigma$:
+\begin{align*}
+\Delta = \sigma \dfrac{1}{4 \pi \cdot 0,0325m} 0,0010N + \dfrac{0,0245N}{4 \pi (0,0325m)^2} 5 \cdot 10^{-5}m = 0,00254N
+\end{align*}
+\subsubsection{Standardabweichung und Größtfehler von $\sigma$ bei Ethanol}
+Wie in Tabelle \ref{tab:Ethanol} zu sehen ist, wurde in allen drei Messungen derselbe Wert für die Kraft gemessen, weshalb die Standardabweichung Null beträgt. Mit den Mittelwerten $F = 7,0mN, \sigma = 0,0171N/m$ ergibt sich der Größtfehler von $\sigma$:
+\begin{align*}
+\Delta = \sigma \dfrac{1}{4 \pi \cdot 0,0325m} 0,0010N + \dfrac{0,0070N}{4 \pi (0,0325m)^2} 5 \cdot 10^{-5}m = 0,00247N
+\end{align*}
+\subsubsection{Standardabweichung und Größtfehler von $\sigma$ bei Kochsalzlösung}
+Aus Tabelle \ref{tab:Kochsalz} folgt eine Standardabweichung von 0,0037. Mit den Mittelwerten $F = 20,3mN, \sigma = 0,0498N/m$ ergibt sich der Größtfehler von $\sigma$:
+\begin{align*}
+\Delta = \sigma \dfrac{1}{4 \pi \cdot 0,0325m} 0,0010N + \dfrac{0,0203N}{4 \pi (0,0325m)^2} 5 \cdot 10^{-5}m = 0,00253N
+\end{align*}
+\subsection{Ergebnisdiskussion}
+
+
+\section{Oberflächenspannung von Tensidlösungen}
+\subsection{Versuchsdurchführung}
+\subsection{Messwerte und Ergebnisse}
+\subsection{Ergebnisdiskussion}
+
+
+\section{Oberflächenspannung von Wasser und einer SDS-Lösung (Kapillarmethode)}
+\subsection{Versuchsdurchführung}
+\subsection{Messwerte und Ergebnisse}
+\subsection{Ergebnisdiskussion}
+
+
+\section{Benetzung von Oberflächen}
+\subsection{Versuchsdurchführung}
+\subsection{Messwerte und Ergebnisse}
+\subsection{Ergebnisdiskussion}
+
+
+\end{document}
