@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{gensymb}
 \usepackage{amssymb}
+\usepackage{float}           %Positionierung von Tabellen und Abb
 
 \title{Physikpraktikum für Naturwissenschaftler \\ Versuch: Schallwellen}
 \author{Felix Burr, Johannes Spindler (Gruppe 13)}
@@ -59,26 +60,39 @@ Grund genug, sich dem interessanten Phänomen der Schallwellen zu widmen.
 Ziel des Versuches ist es, mithilfe eines Quincke'schen Resonanzrohres die Schallgeschwindigkeiten in Luft und $CO_{2}$ und daraus den Adiabatenexponenten in $CO_{2}$ zu berechnen.
 \\
 
-Der Versuchsaufbau sieht folgendermaßen aus: Ein Lautsprecher ist an einen Frequenzgenerator angeschlossen und ist über einem oben offenen Glasrohr angebracht. Innerhalb des Glasrohrs befindet sich ein vertikal beweglicher Stempel mit einem Mikrofon. Das Mikrofon ist an ein Voltmeter angeschlossen. Am Rohr kann an einer Millimeter-Skala die Position des Stempels abgelesen werden.
+Der Versuchsaufbau sieht aus wie in Abbildung \ref{fig:Quincke}: Ein Lautsprecher ist an einen Frequenzgenerator angeschlossen und ist über einem oben offenen Glasrohr angebracht. Innerhalb des Glasrohrs befindet sich ein vertikal beweglicher Stempel mit einem Mikrofon. Das Mikrofon ist an ein Voltmeter angeschlossen. Am Rohr kann an einer Millimeter-Skala die Position des Stempels abgelesen werden.
 
-Zuerst wird die tiefstmögliche Stempelposition $x_{0}$ gesucht, an der das Voltmeter maximal ausschlägt. Dann wird der Stempel bis zu einem Maximum an Position $x_{n}$ geschoben, die möglichst nahe am oberen Rohrende liegt. Dabei wird die Anzahl $n$ der zurückgelegten Intervalle zwischen Maxima gezählt. Der Abstand $d = x_{n} - x_{0}$ entspricht dann der $n$-fachen Halbwellenlänge. Daraus kann die Wellenlänge $\lambda$ berechnet werden:
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.50]{Quincke.PNG}
+  \caption{Quincke'sches Resonanzrohr (aus der Versuchsanleitung)}
+  \label{fig:Quincke}
+\end{figure}
+
+Zuerst wird die tiefstmögliche Stempelposition $x_{0}$ gesucht, an der das Voltmeter maximal ausschlägt. An den Maximapositionen muss es sich um eine stehende Welle handeln. Eine Welle ist stehend, wenn die Schwingungsknoten sich zeitlich nicht bewegen.  Dann ist die Wellenreflexion deckungsgleich zur Welle, was bedeutet dass die Bäuche übereinander liegen und sich also verstärken. Da das Trägermedium (Gas in der Glasröhre) nach beiden Seiten begrenzt ist, gilt hier die folgende Bedingung für stehende Wellen:
 \begin{align}
-\lambda = 2 \dfrac{d}{n} =  2 \dfrac{x_{n}-x_{0}}{n}\\
+d = n  \cdot \frac{\lambda}{2}, n \in \mathbb{N}
 \end{align}
-Die Wellenlänge und die eingestellte Frequenz $f$ führt zur Schallgeschwindigkeit $c$:
+Wenn $x_{0}$ gefunden ist, wird der Stempel bis zu einem Maximum an Position $x_{n}$ geschoben, die möglichst nahe am oberen Rohrende liegt. Dabei wird die Anzahl $n$ der zurückgelegten Intervalle zwischen Maxima gezählt. Der Abstand $d = x_{n} - x_{0}$ entspricht dann dem $n$-Fachen der halben Wellenlänge. Also kann aus Gleichung 1 die Wellenlänge $\lambda$ berechnet werden:
+\begin{align}
+\lambda = 2 \dfrac{d}{n} =  2 \dfrac{x_{n}-x_{0}}{n}
+\end{align}
+Die Wellenlänge und die eingestellte Frequenz $f$ führen zur Schallgeschwindigkeit $c$:
 \begin{align}
 c = \lambda f
 \end{align}
-Bei der Bestimmung der Schallgeschwindigkeit in $CO_{2}$ wird genauso vorgegangen, mit dem Unterschied das über einen seitlichen Anschluss am Glasrohr vor den Messungen $CO_{2}$ eingeleitet wird. Zwischen den Messungen muss immer wieder etwas $CO_{2}$ nachgefüllt werden um Verluste auszugleichen.
+Bei der Bestimmung der Schallgeschwindigkeit in $CO_{2}$ wird genauso vorgegangen, mit dem Unterschied, dass über einen seitlichen Anschluss am Glasrohr vor den Messungen $CO_{2}$ eingeleitet wird. Zwischen den Messungen muss immer wieder etwas $CO_{2}$ nachgefüllt werden um Verluste auszugleichen.
 
 Nun wird die Zimmertemperatur gemessen, um die (temperaturabhängige) Dichte $\rho$ des $CO_{2}$ zu bestimmen:
 \begin{align}
-\rho = \dfrac{\rho_{0}}{1 + \dfrac{\vartheta}{273,2 \degree C}} = \dfrac{1,9768 \dfrac{kg}{m^3}}{1 + \dfrac{\vartheta}{273,2 \degree C}}
+\rho & = \dfrac{\rho_{0}}{1 + \dfrac{\vartheta}{273,2 \degree C}} \\
+\rho_{0} & = 1,9768 \dfrac{kg}{m^3}
 \end{align}
 Mit diesem Wert und dem gemessenen Umgebungsdruck $p$ erhält man schließlich den Adiabatenexponenten $\kappa$ von $CO_{2}$:
 \begin{align}
 \kappa = \dfrac{c^2 \cdot \rho}{p}
 \end{align}
+\newpage
 \subsection{Messwerte und Ergebnisse}
 \subsubsection{Im Medium Luft}
 \begin{table}[h!]
@@ -150,24 +164,28 @@ Gemessener Luftdruck $p = 951 mBar = 95100 Pa$.
 \end{align*}
 \subsection{Fehlerrechnung}
 \begin{align*}
-\Delta d = \left| \dfrac{\partial d}{\partial x_{n}} \right| \Delta x_{n} + \left| \dfrac{\partial d}{\partial x_{0}} \right| \Delta x_{0} = \left| 1 \right| \Delta x_{n} + \left| -1 \right| \Delta x_{0} = \Delta x_{n} + \Delta x_{0} \\
-\end{align*}
-\begin{align*}
-\Delta \lambda = \left| \dfrac{\partial \lambda}{\partial d} \right| \Delta d + \left| \dfrac{\partial \lambda}{\partial n} \right| \Delta n = \left| \dfrac{2}{n} \right| (\Delta x_{n} + \Delta x_{0}) + \left| - \dfrac{2d}{n^2} \right| \Delta n = \\
-\dfrac{2}{n} \Delta x_{n} + \dfrac{2}{n} \Delta x_{0} + \dfrac{2d}{n^2} \Delta n = \dfrac{2}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{d}{n} \Delta n) = \dfrac{2}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{x_{n} - x_{0}}{n} \Delta n)
-\end{align*}
-\begin{align*}
-\Delta c = \left| \dfrac{\partial c}{\partial \lambda} \right| \Delta \lambda = \left| f \right| \Delta \lambda = \dfrac{2f}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{x_{n} - x_{0}}{n} \Delta n)
+\Delta d & = \left| \dfrac{\partial d}{\partial x_{n}} \right| \Delta x_{n} + \left| \dfrac{\partial d}{\partial x_{0}} \right| \Delta x_{0} = \left| 1 \right| \Delta x_{n} + \left| -1 \right| \Delta x_{0} = \Delta x_{n} + \Delta x_{0} \\
+\Delta \lambda & = \left| \dfrac{\partial \lambda}{\partial d} \right| \Delta d + \left| \dfrac{\partial \lambda}{\partial n} \right| \Delta n = \left| \dfrac{2}{n} \right| (\Delta x_{n} + \Delta x_{0}) + \left| - \dfrac{2d}{n^2} \right| \Delta n \\
+& = \dfrac{2}{n} \Delta x_{n} + \dfrac{2}{n} \Delta x_{0} + \dfrac{2d}{n^2} \Delta n = \dfrac{2}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{d}{n} \Delta n) \\
+& = \dfrac{2}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{x_{n} - x_{0}}{n} \Delta n)\\
+\Delta c & = \left| \dfrac{\partial c}{\partial \lambda} \right| \Delta \lambda = \left| f \right| \Delta \lambda = \dfrac{2f}{n} (\Delta x_{n} + \Delta x_{0} + \dfrac{x_{n} - x_{0}}{n} \Delta n)
 \end{align*}
 \subsection{Ergebnisdiskussion}
-In Versuch 2 wurde die Schallgeschwindigkeit in Luft bei der gemessenen Raumtemperatur per Formel berechnet, dies ergab $344 \dfrac{m}{s}$
+In Versuch 2 wurde die Schallgeschwindigkeit in Luft bei der gemessenen Raumtemperatur mit Gleichung 11 berechnet, dies ergab $344 \dfrac{m}{s}$.
 Für die Geschwindigkeit in $CO_{2}$ kann laut Anleitung $266 \dfrac{m}{s}$ als Vergleichswert herangezogen werden.
-Man erkennt, dass die Messung in Luft sehr nahe am Formelwert ist (0,4 \% Abweichung), während die Messung in $CO_{2}$ mit 3,5 \% etwas stärker abweicht. Der Grund hierfür ist, dass beim Verschieben des Stempels nach oben und anschließendem Zurückschieben nach unten ein Unterdruck in der Glasröhre entsteht und dadurch Luft angesaugt wird. Außerdem verschließt der Stempel den unteren Rohrausgang nicht völlig luftdicht, weshalb hier etwas $CO_{2}$ ausfließen kann.
+Man erkennt, dass die Messung in Luft um 0,4 \% abweicht, während die Messung in $CO_{2}$ mit 3,5 \% stärker abweicht. Der Grund hierfür ist, dass beim Verschieben des Stempels nach oben und anschließendem Zurückschieben nach unten ein Unterdruck in der Glasröhre entsteht und dadurch Luft angesaugt wird. Außerdem verschließt der Stempel den unteren Rohrausgang nicht völlig luftdicht, weshalb hier etwas $CO_{2}$ ausfließen kann.
 \section{Versuch 2: Schallgeschwindigkeit in einem Messingstab}
 \subsection{Versuchsdurchführung}
 Mit einem Kundt'schen Staubrohr wird die Schallgeschwindigkeit $c$ in einem Messingstab und daraus das Elastizitätsmodul $E$ des Stabs berechnet.
 
-Beim Kundt'schen Staubrohr handelt es sich um ein mit etwas Korkmehl gefülltes Glasrohr, das auf einer Seite mit einem beweglichen Stempel geschlossen ist und in dessen andere Seite ein Messingstab ragt. Der Stab ist an zwei Punkten über dem Tisch eingespannt
+Beim Kundt'schen Staubrohr (siehe Abbildung \ref{fig:Kundt}) handelt es sich um ein mit etwas Korkmehl gefülltes Glasrohr, das auf einer Seite mit einem beweglichen Stempel geschlossen ist und in dessen andere Seite ein Messingstab ragt. Der Stab ist an zwei Punkten über dem Tisch eingespannt.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.50]{Kundt.PNG}
+  \caption{Kundt'sches Staubrohr (aus der Versuchsanleitung)}
+  \label{fig:Kundt}
+\end{figure}
 
 Der Stempel wird nun so eingestellt, dass für die Länge $l$ und die Wellenlänge $\lambda$ der Luftsäule zwischen Ende des Messingstabs und Stempel gilt:
 \begin{align}
@@ -189,7 +207,8 @@ Es wird in mehreren Messungen also der Stab zum Schwingen angeregt, dann wird di
 \end{align}
 $\lambda_{S}$ entspricht gerade der Länge des Stabs und $c_{L}$ erhält man, abhängig von der Raumtemperatur $\vartheta$ durch
 \begin{align}
-c_{L} = c_{L, 0} \cdot \sqrt{1+\dfrac{\vartheta}{273,2 \degree C}} = 331 \dfrac{m}{s} \cdot \sqrt{1+\dfrac{\vartheta}{273,2 \degree C}}
+c_{L} = c_{L, 0} & \cdot \sqrt{1+\dfrac{\vartheta}{273,2 \degree C}} \\
+c_{L, 0} & = 331 \dfrac{m}{s}
 \end{align}
 Damit sind alle Größen bekannt, um $c_{S}$ mit (6) zu berechnen. Für das Elastizitätsmodul gilt dann:
 \begin{align}
@@ -228,9 +247,9 @@ E = c_{S}^2 \rho = 3550^2 \cdot 8440 \cdot \dfrac{m^2}{s^2} \dfrac{kg}{m^3} = 1,
 \end{align*}
 
 \subsection{Ergebnisdiskussion}
-Der hier bestimmte Wert $c_{S}$ für die Schallgeschwindigkeit in Messing überschreitet den Literaturwert  von 3530 m/s auf der Versuchsanleitung um 0,6 \%. Das bedeutet, der Mittelwert für $c_{L}$ kommt der Realität ziemlich nahe und die Messungen 3, 4, 5, 7, die diesem entsprechen, waren am genauesten. Fehler bei den anderen Messungen lassen sich durch schlechter ausgeprägte Wellenmuster im Staub und ungenaues Ablesen erklären. 
+Der hier bestimmte Wert $c_{S}$ für die Schallgeschwindigkeit in Messing überschreitet den Literaturwert  von 3530 m/s auf der Versuchsanleitung um 0,6 \%. Das bedeutet, die Messungen 3, 4, 5, 7, die dem Mittelwert für $c_{L}$ entsprechen, waren am genauesten. Fehler bei den anderen Messungen lassen sich durch schlechter ausgeprägte Wellenmuster im Staub und ungenaues Ablesen erklären. 
 
-Der berechnete Wert für $E$ ist mit einer Unterschreitung des Literaturwerts von 110 GPa um 3,6 \% auch relativ realitätsnah und ist wahrscheinlich auf das Vernachlässigen der Temperaturabhängigkeit der Dichte $\rho$ zurückzuführen.
+Der berechnete Wert für $E$ unterschreitet den Literaturwerts von 110 GPa um 3,6 \%. Diese Abweichung ist wahrscheinlich auf das Vernachlässigen der Temperaturabhängigkeit der Dichte $\rho$ zurückzuführen.
 
 
 \section{Versuch 3: Direkte Messung der Schallgeschwindigkeit in Luft}
@@ -239,7 +258,7 @@ In diesem Versuch wird per Frequenzgenerator eine Frequenz erzeugt, welche am La
 Versetzt man nun das Mikrofon, sieht man am Oszilloskop wie sich die Welle verschiebt.
 Mittels Gleichung (7) kann man die Schallgeschwindigkeit ermitteln
 \subsection{Messwerte und Ergebnisse}
-\begin{table}[h]
+\begin{table}[H]
 \begin{tabular}{l|l|l|l|l}
 Messung & Distanz $[cm]$ & Anzahl Perioden & Frequenz $[hz]$ & Wellenlänge $[cm]$ \\ \hline
 1       & 24.0          & 4 & 6000 & 6.00\\
@@ -251,7 +270,6 @@ Messung & Distanz $[cm]$ & Anzahl Perioden & Frequenz $[hz]$ & Wellenlänge $[cm
 7       & 20.7          & 5 & 9000 & 4.14\\
 \end{tabular}
 \end{table}
-\includegraphics[width=1\textwidth]{Versuch3_dia.png}
 Mit (5) resultiert, dass die Schallgeschwindigkeit im Mittel $365$ Meter pro Sekunde beträgt.
 \subsection{Ergebnisdiskussion}
 Der hier Bestimmte Wert für die Schallgeschwindigkeit in Luft weicht im  Vergleich mit dem Literaturwert von $343 \frac{m}{s}$ um ganze $22\frac{m}{s}$ ab. Dies wird vor allem an Messfehlern beim Ablesen liegen.
@@ -261,7 +279,7 @@ Wie in Versuch 2 beschrieben, wird hier ein Messingstab in Schwingung versetzt. 
 V_{Schall} = f \cdot d_{Knoten}
 \end{align}
 \subsection{Messwerte und Ergebnisse}
-\begin{table}[h]
+\begin{table}[H]
 \begin{tabular}{l|l}
 Peak Nummer &	Frequenz $[hz]$\\ \hline
 1			&	2200\\
@@ -272,11 +290,15 @@ Peak Nummer &	Frequenz $[hz]$\\ \hline
 6			&	132000\\
 \end{tabular}
 \end{table}
-Skizze der n-ten Harmonischen:\\
-\includegraphics[width=1\textwidth]{Versuch4_skizze.pdf}\\
-
-\begin{table}[h]
-Auswertung der Schallgeschwindigkeit mithilfe von (11):
+Skizze der n-ten Harmonischen:
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{Versuch4_skizze.pdf}
+  
+  \label{fig:Diagramm}
+\end{figure}
+\begin{table}[H]
+Auswertung der Schallgeschwindigkeit mithilfe von Gleichung (13):
 \begin{tabular}{l|l|l|l}
 n-te Harmonische &	Distanz $[m]$ & Frequenz $[hz]$&Schallgeschwindigkeit $[\frac{m}{s}]$\\ \hline
 1			&	1.6		&	2200	&	 3520\\
@@ -287,6 +309,7 @@ n-te Harmonische &	Distanz $[m]$ & Frequenz $[hz]$&Schallgeschwindigkeit $[\frac
 \end{tabular}
 \end{table}
 \subsection{Ergebnisdiskussion}
-Die Schallgeschwindigkeit in Messing beträgt nach diesen Messungen $3520\frac{m}{s}$. Somit unterschreitet dies den Literaturwert von $3530\frac{m}{s}$ um $0.3\%$. Also kommt der gemessene Wert dem Literaturwert sehr nahe.
+Die Schallgeschwindigkeit in Messing beträgt nach diesen Messungen $3520\frac{m}{s}$. Somit unterschreitet dies den Literaturwert von $3530\frac{m}{s}$ um $0.3\%$.
 
 \end{document}
+
