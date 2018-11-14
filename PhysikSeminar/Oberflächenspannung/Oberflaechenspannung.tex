@@ -234,12 +234,66 @@ Zusätzlich kommt hinzu, dass die Zugabe von Stammlösung durch eine Pipette nic
   \label{fig:Kapillar}
 \end{figure}
 \subsection{Messwerte und Ergebnisse}
+\begin{table}[H]
+\captionof{table}{Steighöhe von Wasser in Abhängigkeit des Kapillardurchmessers}
+\begin{center}
+\begin{tabular}{l|l|l|l|l}
+Röhre & Kapillardurchmesser $[m]$& Wasseroberfläche $[m]$ & Meniskus $[m]$ & Steighöhe $[m]$       \\
+\hline
+1       & 0,005   	& 0,01 & 0,013 		& 0,003 \\
+2       & 0,0031   	& 0,01 & 0,0184 	& 0,0084 \\
+3       & 0,00165   & 0,01 & 0,0277		& 0,0177 \\
+4       & 0,0012   	& 0,01 & 0,0349		& 0,0249 \\
+5       & 0,00083	& 0,01 & 0,0465		& 0,0365 \\
+\end{tabular}
+\end{center}
+\label{tab:Steig_W}
+\end{table}
+
+\begin{table}[H]
+\captionof{table}{Steighöhe von SDS in Abhängigkeit des Kapillardurchmessers}
+\begin{center}
+\begin{tabular}{l|l|l|l}
+Röhre & Kapillardurchmesser $[m]$& Steighöhe $[pixel]$ & Steighöhe $[m]$       \\
+\hline
+1       & 0,005   	& 20 	& 0,0038 \\
+2       & 0,0031   	& 27 	& 0,0052 \\
+3       & 0,00165   & 70	& 0,0136 \\
+4       & 0,0012   	& 73	& 0,0142 \\
+5       & 0,00083	& 180	& 0,0349 \\
+\end{tabular}
+\end{center}
+\label{tab:Steig_S}
+\end{table}
 \subsection{Ergebnisdiskussion}
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.6]{pypr_OV3W.pdf}
+  \caption{Lineare Regression über Tabelle 5}
+  \label{fig:Steig_W}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.6]{pypr_OV3S.pdf}
+  \caption{Lineare Regression über Tabelle 6}
+  \label{fig:Steig_S}
+\end{figure}
+Wie in Abbildung \ref{tab:Steig_W} und \ref{tab:Steig_S} zu sehen ist, verhält sich das Inverse des Kapillardurchmessers linear zur Steighöhe. Durch die Steigung der Geraden können wir mittels
+\begin{align}
+\sigma = \dfrac{1}{2}\cdot \rho \cdot g \cdot h \cdot r 
+\label{eq:sigma_V3}
+\end{align}
+Die Oberflächenspannung bestimmen.
+Bei Wasser haben wir eine Oberflächenspannung von $\sigma = 73,35 \frac{mN}{m}$ ermittelt. Im Vergleich zum Literaturwert von $72.5 \frac{mN}{m}$ weicht der gemessene Wert um $1.16\%$ ab, was vor allem auf den Temperaturunterschied oder potentielle Verschmutzungen des Wassers und des Kapillars zurückzuführen ist.
+Bei SDS haben wir hingegen eine Oberflächenspannung von $\sigma = 71,40 \frac{mN}{m}$ ermittelt. Im vorhergehenden Versuch erhielten wir dafür einen Wert von $\sigma = 29,4 \frac{mN}{m}$. Was überhaupt nicht mit dem aktuellen Wert übereinstimmt.
+Eine Erklärung dafür wäre die Möglichkeit, dass die SDS Lösung mit Wasser vertauscht bzw. verwechselt wurde.
 
 \newpage
 \section{Benetzung von Oberflächen}
 \subsection{Versuchsdurchführung}
-\subsection{Messwerte und Ergebnisse}
+In diesem Versuch untersuchen wir die Vernetzung von Oberflächen, indem wir mit einer Pipette einen Wassertropfen auf eine Glasplatte fallen lassen,  die einmal kalt (Raumtemperatur) und einmal heiß (erhitzen via Bunsenbrenner) ist.
+Wir beobachten nun, wie sich der Wassertropfen auf der Oberfläche jeweils verhält. 
+
 \subsection{Ergebnisdiskussion}
 
 
