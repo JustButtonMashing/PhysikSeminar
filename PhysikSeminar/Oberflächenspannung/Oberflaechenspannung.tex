@@ -54,7 +54,7 @@ Im Folgenden werden verschiedene Methoden zur Bestimmung der Oberflächenspannun
 \section{Oberflächenspannung von Wasser, Ethanol und Kochsalzlösung (Abreißmethode)}
 \subsection{Versuchsdurchführung}
 
-Der Versuchsaufbau besteht aus einem Behältnis mit Flüssigkeit, das auf einem Podest mit verstellbarer Höhe steht. An einer Federwaage über diesem hängt ein Ring mit scharfer Schneide. Dessen Radius $r$ wird mit einer Schieblehre bestimmt. Das Podest wird zu Beginn so eingestellt, dass der Ring in der Flüssigkeit hängt, dann wird es heruntergefahren. Dabei bildet sich eine Flüssigkeitslamelle am Rand des Rings. Die Skala der Federwaage muss dabei im Auge behalten werden. Schließlich wird die Kraft $F$ in dem Moment abgelesen, indem die Lamelle abreißt, was diesem Vorgehen den Namen Abreißmethode gibt.
+Der Versuchsaufbau, wie er in Abbildung \ref{fig:Abreiss} gezeigt wird, besteht aus einem Behältnis mit Flüssigkeit, das auf einem Podest mit verstellbarer Höhe steht. An einer Federwaage über diesem hängt ein Ring mit scharfer Schneide. Dessen Radius $r$ wird mit einer Schieblehre bestimmt. Das Podest wird zu Beginn so eingestellt, dass der Ring in der Flüssigkeit hängt, dann wird es heruntergefahren. Dabei bildet sich eine Flüssigkeitslamelle am Rand des Rings. Die Skala der Federwaage muss dabei im Auge behalten werden. Schließlich wird die Kraft $F$ in dem Moment abgelesen, indem die Lamelle abreißt, was diesem Vorgehen den Namen Abreißmethode gibt.
 
 \begin{figure}[H]
   \centering
@@ -102,7 +102,7 @@ Mittelwert & 24,5       & 0,0600
 \end{center}
 \label{tab:Wasser}
 \end{table}
-\subsubsection{Messungen bei Ethanol}
+\subsubsection{Messungen bei reinem Ethanol}
 
 \begin{table}[H]
 \captionof{table}{Kraft $F$ und Oberflächenspannung $\sigma$ bei Ethanol}
@@ -118,7 +118,7 @@ Mittelwert & 7,0       & 0,0171
 \end{center}
 \label{tab:Ethanol}
 \end{table}
-\subsubsection{Messungen bei Kochsalzlösung}
+\subsubsection{Messungen bei Kochsalzlösung mit 3 mol/l}
 
 \begin{table}[H]
 \captionof{table}{Kraft $F$ und Oberflächenspannung $\sigma$ bei Kochsalzlösung}
@@ -147,18 +147,21 @@ Aus Tabelle \ref{tab:Wasser} folgt eine Standardabweichung von 0,0021. Mit den M
 \Delta \sigma & = \dfrac{1}{4 \pi \cdot 0,0325m} 0,0010N + \dfrac{0,0245N}{4 \pi (0,0325m)^2} 5 \cdot 10^{-5}m = 0,00254N \\
 \sigma & = 0,0600N \pm 0,00254N
 \end{align*}
+Der ermittelte Wert liegt damit deutlich außerhalb des Größtfehlerintervalls \\$[0,06945N/m, 0,07453N/m]$ um den Literaturwert $0,07199N/m$ (Begründung in der Ergebnisdiskussion).
 \subsubsection{Standardabweichung und Größtfehler von $\sigma$ bei Ethanol}
 Wie in Tabelle \ref{tab:Ethanol} zu sehen ist, wurde in allen drei Messungen derselbe Wert für die Kraft gemessen, weshalb die Standardabweichung Null beträgt. Mit den Mittelwerten $F = 7,0mN, \sigma = 0,0171N/m$ ergibt sich der Größtfehler von $\sigma$:
 \begin{align*}
 \Delta \sigma & = \dfrac{1}{4 \pi \cdot 0,0325m} 0,0010N + \dfrac{0,0070N}{4 \pi (0,0325m)^2} 5 \cdot 10^{-5}m = 0,00247N \\
 \sigma & = 0,0171N \pm 0,00247N
 \end{align*}
+Der ermittelte Wert liegt damit deutlich außerhalb des Größtfehlerintervalls \\$[0,01950N/m, 0,02444N/m]$ um den Literaturwert $0,02197N/m$ (Begründung in der Ergebnisdiskussion).
 \subsubsection{Standardabweichung und Größtfehler von $\sigma$ bei Kochsalzlösung}
 Aus Tabelle \ref{tab:Kochsalz} folgt eine Standardabweichung von 0,0037. Mit den Mittelwerten $F = 20,3mN, \sigma = 0,0498N/m$ ergibt sich der Größtfehler von $\sigma$:
 \begin{align*}
 \Delta \sigma & = \dfrac{1}{4 \pi \cdot 0,0325m} 0,0010N + \dfrac{0,0203N}{4 \pi (0,0325m)^2} 5 \cdot 10^{-5}m = 0,00253N \\
 \sigma & = 0,0498N \pm 0,00253N
 \end{align*}
+Der ermittelte Wert liegt damit deutlich außerhalb des Größtfehlerintervalls \\$[0,07947N/m, 0,08453N/m]$ um den Literaturwert $0,082N/m$ (Begründung in der Ergebnisdiskussion).
 \subsection{Ergebnisdiskussion}
 Da die Raumtemperatur $22,9 \degree C$ betrug, werden zum Vergleich die Literaturwerte für die Oberflächenspannung bei $25 \degree C$ aus der Versuchsanleitung herangezogen, die Temperaturabweichung wird vernachlässigt.
 
@@ -186,6 +189,7 @@ Die Oberflächenspannung kann wieder mit Gleichung \ref{eq:sigma2} bestimmt werd
 
 Übersteigt $C_{F}$ die kritische Micellenkonzentration $CMC$, kann haben keine weiteren SDS-Moleküle mehr Platz an der Wasseroberfläche und die Oberflächenspannung bleibt konstant. Die $CMC$ soll durch die Messungen abgeschätzt werden.
 \subsection{Messwerte und Ergebnisse}
+Die Messwerte für $F$ und $\sigma$ und die errechnete SDS-Konzentration $C_{F}$ abhängig vom Volumen $V_{SDS}$ des zugegebenen SDS sind in Tabelle \ref{tab:SDS} festgehalten. Abbildung \ref{fig:plot_sigma} zeigt mit den Werten von Tabelle \ref{tab:SDS} den Zusammenhang zwischen dem Logarithmus von $C_{F}$ auf der x-Achse und $\sigma$ auf der y-Achse
 \begin{table}[H]
 \captionof{table}{SDS-Konzentration $C_{F}$ der Flüssigkeit, Kraft $F$ und Oberflächenspannung $\sigma$ abhängig von zugegebenem SDS-Volumen $V_{SDS}$}
 \begin{center}
@@ -227,7 +231,11 @@ Zusätzlich kommt hinzu, dass die Zugabe von Stammlösung durch eine Pipette nic
 \newpage 
 \section{Oberflächenspannung von Wasser und einer SDS-Lösung (Kapillarmethode)}
 \subsection{Versuchsdurchführung}
-Es stehen für den Versuch Glasröhren mit den Kapillardurchmessern 5mm, 3,1mm, 1,65mm, 1,2mm und 0,83mm zur Verfügung. Diese 5 Röhren werden einmal in ein Wasserbecken und einmal in ein Becken mit der Tensidlösung aus Versuch 3 gestellt. Dabei muss darauf geachtet werden, dass keine Luftbläschen in den Röhren bleiben. Dann wird mit verschiedenen Methoden die Steighöhe der Flüssigkeit in den Röhren ermittelt.
+Es stehen für den Versuch Glasröhren mit den Kapillardurchmessern $5mm, 3,1mm$, $1,65mm, 1,2mm$ und $0,83mm$ zur Verfügung. Diese 5 Röhren werden einmal in ein Wasserbecken und einmal in ein Becken mit der Tensidlösung aus Versuch 3 gestellt. Dabei muss darauf geachtet werden, dass keine Luftbläschen in den Röhren bleiben. Durch den Kapillareffekt steigt das Wasser in den Röhren um die Steighöhe $h$, abhängig vom Radius $r$ der Röhre und von der Oberflächenspannung $\sigma$ (siehe Abbildung \ref{fig:Kapillar}). Es gilt nämlich der Zusammenhang:
+\begin{align}
+\sigma = \dfrac{1}{2}\cdot \rho \cdot g \cdot h \cdot r
+\end{align}
+Mit zwei unterschiedlichen Methoden wird also $h$ in Wasser und SDS-Lösung gemessen, um deren Oberflächenspannung $\sigma$ zu berechnen.
 
 Bei Wasser wird ein Fernrohr so eingestellt, dass das Fadenkreuz auf dem Level der Wasseroberfläche ist, der Wert der Fernglas-Skala wird notiert, dann wird das Fadenkreuz auf den Meniskus gerichtet und die Fernglas-Skala abgelesen. Die Differenz zwischen Meniskus und Wasseroberfläche ist die Steighöhe.
 
@@ -239,8 +247,9 @@ Bei der SDS-Lösung wird das Becken samt Röhren und mit einem Lineal fotografie
   \label{fig:Kapillar}
 \end{figure}
 \subsection{Messwerte und Ergebnisse}
+Tabelle \ref{fig:Steig_W} zeigt die Messungen für die Wasseroberfläche und den Meniskus und daraus folgend die Steighöhe des Wassers, Tabelle \ref{tab:Steig_S} zeigt die gemessene Steighöhe der SDS-Lösung in Pixel, die dann mit dem Verhältnis 5160 Pixel/Meter in Meter umgerechnet wird. In Abbildung \ref{fig:Steig_W} ist die Steighöhe gegen den inversen Kapillarradius 1/r aufgetragen und mit linearer Regression wird die Oberflächenspannung von Wasser als Geradensteigung ermittelt. Abbildung \ref{fig:Steig_S} leistet selbiges für die Oberflächenspannung der SDS-Lösung.
 \begin{table}[H]
-\captionof{table}{Steighöhe von Wasser in Abhängigkeit des Kapillardurchmessers}
+\captionof{table}{Steighöhe von Wasser abhängig vom Kapillardurchmesser}
 \begin{center}
 \begin{tabular}{l|l|l|l|l}
 Röhre & Kapillardurchmesser $[m]$& Wasseroberfläche $[m]$ & Meniskus $[m]$ & Steighöhe $[m]$       \\
@@ -256,7 +265,7 @@ Röhre & Kapillardurchmesser $[m]$& Wasseroberfläche $[m]$ & Meniskus $[m]$ & S
 \end{table}
 
 \begin{table}[H]
-\captionof{table}{Steighöhe von SDS in Abhängigkeit des Kapillardurchmessers}
+\captionof{table}{Steighöhe von SDS in abhängig vom Kapillardurchmesser}
 \begin{center}
 \begin{tabular}{l|l|l|l}
 Röhre & Kapillardurchmesser $[m]$& Steighöhe $[pixel]$ & Steighöhe $[m]$       \\
