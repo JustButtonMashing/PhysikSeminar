@@ -48,15 +48,42 @@
 \pagebreak
 
 \section{Einleitung}
-Unter Beugung wird die Ausbreitung von Wellen in den Schattenbereich hinter Objekten verstanden. Da Beugung für Wellen auftritt, aber nicht für Teilchen, ist die Beugung von Licht ein Indiz für dessen Wellencharakter. Mithilfe des Strahlenmodells des Lichts ist die Beugung nicht erklärbar und die Geometrische Optik mit ihrem Strahlenmodell ist auch nur eine Annäherung an die Realität, da sie nutzt, dass die Beugung des Lichts vernachlässigbar ist, wenn Öffnungen und Hindernisse sehr viel größer sind als die Wellenlänge des Lichts. Das Phänomen der Beugung ist sehr nützlich bei der Untersuchung von Objekten. So kann zum Beispiel die Spaltbreite eines Gitters, die Gitterkonstante, berechnet werden (siehe Abschnitt 2) oder ein ein chemisches Element durch die Spektralanalyse bestimmt werden (siehe Abschnitt 4).
+Unter Beugung wird die Ausbreitung von Wellen in den Schattenbereich hinter Objekten verstanden. Da Beugung für Wellen auftritt, aber nicht für Teilchen, ist die Beugung von Licht ein Indiz für dessen Wellencharakter. Mithilfe des Strahlenmodells des Lichts ist die Beugung nicht erklärbar und die Geometrische Optik mit ihrem Strahlenmodell ist auch nur eine Annäherung an die Realität, da sie nutzt, dass die Beugung des Lichts vernachlässigbar ist, wenn Öffnungen und Hindernisse sehr viel größer sind als die Wellenlänge des Lichts. Das Phänomen der Beugung ist sehr nützlich bei der Untersuchung von Objekten. So kann zum Beispiel die Spaltbreite eines Gitters, die Gitterkonstante, berechnet werden (siehe Abschnitt 2) oder ein chemisches Element durch die Spektralanalyse bestimmt werden (siehe Abschnitt 4).
 
 \section{Strukturaufklärung (Bestimmung einer Gitterkonstanten)}
 \subsection{Versuchsdurchführung}
+Das zu untersuchende Gitter mit Gitterkonstante $g$ wird mit einem HeNe-Laser der Wellenlänge $\lambda = 632,8nm$ beleuchtet. Die Wand dient als Schirm, weshalb der Laser so positioniert sein soll, dass der Strahl senkrecht zur Wand verläuft. Es erscheinen Beugungsmaxima auf der Wand. Abbildung \ref{fig:Gitter} zeigt diese Versuchsanordnung.
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.75]{BeugungGitter.PNG}
+  \caption{Versuchsaufbau zur Bestimmung der Gitterkonstante (aus der Versuchsanleitung)}
+  \label{fig:Gitter}
+\end{figure}
+Für jedes Maximapaar der Ordnung $n$ wird bis $n = 3$ jeweils der Abstand $a_{n}$ zwischen den beiden Maxima gemessen. Mit dem Winkel $\alpha_{n}$ zwischen dem Laserstrahl und der Strecke Gitter-Maximum kann dann die Gitterkonstante berechnet werden:
+\begin{align}
+g = \dfrac{n \lambda}{sin \left( \alpha_{n} \right) }
+\end{align}
+$\alpha_{n}$ wird mit dem konstanten Abstand $s$ zwischen Gitter und Wand bestimmt durch $tan (\alpha_{n}) = \dfrac{a_{n}}{2s}$, deshalb ergibt sich für $g$:
+\begin{align}
+g = \dfrac{n \lambda}{sin \left( arctan \left( \dfrac{a_{n}}{2s} \right) \right) }
+\label{eq:Gitter1}
+\end{align}
+In diesem Versuch ist $\alpha_{n}$ klein, deshalb wird die Kleinwinkelnäherung $tan (\alpha_{n}) \cong sin (\alpha_{n})$ verwendet:
+\begin{align}
+g \cong \dfrac{n \lambda}{tan \left( arctan \left( \dfrac{a_{n}}{2s} \right) \right) } = \dfrac{2n \lambda s}{a_{n}}
+\label{eq:Gitter2}
+\end{align}
+
 \subsection{Fehlerrechnung}
+Der Größtfehler $\Delta g$ der Gitterkonstante mit Gleichung \ref{eq:Gitter2} beträgt
 \begin{align*}
-\Delta g & = \left| \dfrac{\partial g}{\partial s} \right| \Delta s + \left| \dfrac{\partial g}{\partial a_{n}} \right| \Delta a_{n} = \left| \dfrac{2n \lambda}{a_{n}} \right| \Delta s + \left| 2n \lambda s \cdot \dfrac{-1}{a_{n}^{2}} \right| \Delta a_{n} = \dfrac{2n \lambda}{a_{n}} \cdot (\Delta s + \dfrac{s}{a_{n}} \Delta a_{n})\\
+\Delta g & = \left| \dfrac{\partial g}{\partial s} \right| \Delta s + \left| \dfrac{\partial g}{\partial a_{n}} \right| \Delta a_{n} = \left| \dfrac{2n \lambda}{a_{n}} \right| \Delta s + \left| 2n \lambda s \cdot \dfrac{-1}{a_{n}^{2}} \right| \Delta a_{n} = \dfrac{2n \lambda}{a_{n}} \cdot \left( \Delta s + \dfrac{s}{a_{n}} \Delta a_{n} \right)
 \end{align*}
+Mit den Größtfehlern $\Delta s = 0,005m$ und $\Delta a_{n} = 0,002m$ ergeben sich  die Werte aus Tabelle \ref{tab:Gitter} für $\Delta g$.
 \subsection{Messwerte und Ergebnisse}
+Bekannte Wellenlänge des Lasers: $\lambda = 632,8nm$ \\
+Messung des Abstands Gitter-Wand: $s = 1,975m$
+Tabelle \ref{tab:Gitter} zeigt für jede Ordnung $n$ die Abstandsmessung $a_{n}$ zwischen den Maxima, das Ergebnis für $g$ und den Größtfehler $\Delta g$.
 \begin{table}[H]
 \captionof{table}{Maxima-Abstand $a_{n}$, damit errechnete Gitterkonstante $g$ und deren Größtfehler $\Delta g$ nach Ordnungen $n$ der Maxima}
 \begin{center}
@@ -66,12 +93,15 @@ $n$    & $a_{n}$ {[}m{]} & $g$ {[}m{]} & $\Delta g$ {[}m{]}\\
 1          & 0,248       & $1,008 \cdot 10^{-5}$ & $1,068 \cdot 10^{-7}$ \\
 2          & 0,504       & $9,919 \cdot 10^{-6}$ & $6,477 \cdot 10^{-8}$ \\
 3          & 0,773       & $9,701 \cdot 10^{-6}$ & $4,966 \cdot 10^{-8}$ \\
-Mittelwert &             & $9,900 \cdot 10^{-6}$ &
+\hline
+Mittelwert &             & $9,900 \cdot 10^{-6}$ & $7,364 \cdot 10^{-8}$
 \end{tabular}
 \end{center}
-\label{tab:Wasser}
+\label{tab:Gitter}
 \end{table}
+
 \subsection{Ergebnisdiskussion}
+Der tatsächliche Wert für die Gitterkonstante ist mit $10 \mu m = 10^{-5} m$ angegeben. Diesen unterschreitet der Mittelwert um 1\% und liegt damit außerhalb des Größtfehlerintervalls. Diese Abweichung ist akzeptabel, da bei der Bestimmung von $g$ die Kleinwinkelnäherung in Gleichung \ref{eq:Gitter2} statt der genauen Gleichung \ref{eq:Gitter1} genutzt wurde.
 
 \section{Bestimmung der Spurweite einer CD bzw. DVD}
 \subsection{Versuchsdurchführung}
