@@ -1,0 +1,96 @@
+\documentclass{scrartcl}
+
+\usepackage{german}
+\usepackage[utf8]{inputenc}  %Umlaute
+\usepackage[T1]{fontenc}     %Umlauttrennung
+\usepackage{lmodern}         %modernes Schriftbild
+\usepackage{amsmath}         %math Umgebungen
+\usepackage{graphicx}
+\usepackage{hyperref}        %URLs
+\usepackage{gensymb}         %Gradzeichen
+\usepackage{float}           %Positionierung von Tabellen und Abb
+
+\title{Physikpraktikum für Naturwissenschaftler \\ Versuch: Beugung}
+\author{Felix Burr, Johannes Spindler (Gruppe 13)}
+\date{Durchgeführt am 06. Dezember 2018}
+
+
+\begin{document}
+\begin{titlepage}
+  \begin{center}
+    \vspace*{1cm}
+    \LARGE
+    Physikpraktikum für Naturwissenschaftler \\
+    \vspace*{1cm}
+    \Huge
+    \textbf{Versuch: Beugung} \\
+    \vspace*{0.3cm}
+    \Large
+    Durchgeführt am 06. Dezember 2018 \\
+    Betreuer: Devin Assenheimer \\
+    \vspace*{2.5cm}
+    Gruppe 13 \\
+    Felix Burr: felix.burr@uni-ulm.de \\
+    Johannes Spindler: johannes.spindler@uni-ulm.de \\
+    \vfill 
+  \end{center}
+  Wir bestätigen hiermit, das Protokoll selbstständig erarbeitet zu haben und in genauer Kenntnis über dessen Inhalt zu sein. \\
+  \vspace*{0.8cm}
+  \\
+  Felix Burr
+  \hfill
+  Johannes Spindler
+\end{titlepage}
+\pagebreak
+\tableofcontents
+
+
+\pagebreak
+
+\section{Einleitung}
+Unter Beugung wird die Ausbreitung von Wellen in den Schattenbereich hinter Objekten verstanden. Da Beugung für Wellen auftritt, aber nicht für Teilchen, ist die Beugung von Licht ein Indiz für dessen Wellencharakter. Mithilfe des Strahlenmodells des Lichts ist die Beugung nicht erklärbar und die Geometrische Optik mit ihrem Strahlenmodell ist auch nur eine Annäherung an die Realität, da sie nutzt, dass die Beugung des Lichts vernachlässigbar ist, wenn Öffnungen und Hindernisse sehr viel größer sind als die Wellenlänge des Lichts. Das Phänomen der Beugung ist sehr nützlich bei der Untersuchung von Objekten. So kann zum Beispiel die Spaltbreite eines Gitters, die Gitterkonstante, berechnet werden (siehe Abschnitt 2) oder ein ein chemisches Element durch die Spektralanalyse bestimmt werden (siehe Abschnitt 4).
+
+\section{Strukturaufklärung (Bestimmung einer Gitterkonstanten)}
+\subsection{Versuchsdurchführung}
+\subsection{Fehlerrechnung}
+\begin{align*}
+\Delta g & = \left| \dfrac{\partial g}{\partial s} \right| \Delta s + \left| \dfrac{\partial g}{\partial a_{n}} \right| \Delta a_{n} = \left| \dfrac{2n \lambda}{a_{n}} \right| \Delta s + \left| 2n \lambda s \cdot \dfrac{-1}{a_{n}^{2}} \right| \Delta a_{n} = \dfrac{2n \lambda}{a_{n}} \cdot (\Delta s + \dfrac{s}{a_{n}} \Delta a_{n})\\
+\end{align*}
+\subsection{Messwerte und Ergebnisse}
+\begin{table}[H]
+\captionof{table}{Maxima-Abstand $a_{n}$, damit errechnete Gitterkonstante $g$ und deren Größtfehler $\Delta g$ nach Ordnungen $n$ der Maxima}
+\begin{center}
+\begin{tabular}{l|l|l|l}
+$n$    & $a_{n}$ {[}m{]} & $g$ {[}m{]} & $\Delta g$ {[}m{]}\\
+\hline
+1          & 0,248       & $1,008 \cdot 10^{-5}$ & $1,068 \cdot 10^{-7}$ \\
+2          & 0,504       & $9,919 \cdot 10^{-6}$ & $6,477 \cdot 10^{-8}$ \\
+3          & 0,773       & $9,701 \cdot 10^{-6}$ & $4,966 \cdot 10^{-8}$ \\
+Mittelwert &             & $9,900 \cdot 10^{-6}$ &
+\end{tabular}
+\end{center}
+\label{tab:Wasser}
+\end{table}
+\subsection{Ergebnisdiskussion}
+
+\section{Bestimmung der Spurweite einer CD bzw. DVD}
+\subsection{Versuchsdurchführung}
+\subsection{Messwerte und Ergebnisse}
+\subsection{Ergebnisdiskussion}
+
+\section{Spektralanalyse (Untersuchung einer unbekannten Lichtquelle)}
+\subsection{Versuchsdurchführung}
+\subsection{Messwerte und Ergebnisse}
+\subsection{Ergebnisdiskussion}
+
+\section{Strukturaufklärung (Bestimmung einer Gitterkonstanten)}
+\subsection{Versuchsdurchführung}
+\subsection{Messwerte und Ergebnisse}
+\subsection{Ergebnisdiskussion}
+
+\section{Strukturaufklärung (Bestimmung einer Gitterkonstanten)}
+\subsection{Versuchsdurchführung}
+\subsection{Messwerte und Ergebnisse}
+\subsection{Ergebnisdiskussion}
+Bei kleiner werdender Spaltbreite werden die Maxima breiter und auseinandergezogen.
+\end{document}
