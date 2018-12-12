@@ -81,7 +81,7 @@ Der Größtfehler $\Delta g$ der Gitterkonstante mit Gleichung \ref{eq:Gitter2} 
 \end{align*}
 Mit den Größtfehlern $\Delta s = 0,005m$ und $\Delta a_{n} = 0,002m$ ergeben sich  die Werte aus Tabelle \ref{tab:Gitter} für $\Delta g$.
 \subsection{Messwerte und Ergebnisse}
-Bekannte Wellenlänge des Lasers: $\lambda = 632,8nm$ \\
+Bekannte Wellenlänge des Lasers: $\lambda = 632,8nm = 6,328 \cdot 10^{-7}m$ \\
 Messung des Abstands Gitter-Wand: $s = 1,975m$
 Tabelle \ref{tab:Gitter} zeigt für jede Ordnung $n$ die Abstandsmessung $a_{n}$ zwischen den Maxima, das Ergebnis für $g$ und den Größtfehler $\Delta g$.
 \begin{table}[H]
@@ -105,7 +105,14 @@ Der tatsächliche Wert für die Gitterkonstante ist mit $10 \mu m = 10^{-5} m$ a
 
 \section{Bestimmung der Spurweite einer CD bzw. DVD}
 \subsection{Versuchsdurchführung}
+Ziel des Versuches ist es, die Spurweite eines Datenträgers zu berechnen und damit zu bestimmen, ob es sich um eine CD oder um eine DVD handelt. Dazu wird dasselbe Vorgehen wie bei der Berechnung der Gitterkonstante im vorherigen Abschnitt angewandt, diesmal ist $g$ die Spurweite. Es wird wieder der HeNe-Laser verwendet, die CD ersetzt das Gitter. Es werden nur die Maxima erster Ordnung betrachtet, da die Maxima höherer Ordnung nicht zu erkennen sind. Der Laser muss dieses Mal etwas näher zur Wand gerückt werden, da die Winkel $\alpha_{n}$ wesentlich größer als beim Gitter sind. Daher wird die Berechnung per Kleinwinkelnäherung (Gleichung \ref{eq:Gitter2} zu ungenau, stattdessen wird der genaue Wert mit Gleichung \ref{eq:Gitter1} berechnet.
 \subsection{Messwerte und Ergebnisse}
+Bekannte Wellenlänge des Lasers: $\lambda = 632,8nm = 6,328 \cdot 10^{-7}m$ \\
+Messung des Abstands CD-Wand: $s = 0,196m$ \\
+Abstand der Maxima: $a_{n} = 0,185m$
+\begin{align*}
+g = \dfrac{n \lambda}{sin \left( arctan \left( \dfrac{a_{n}}{2s} \right) \right) } = \dfrac{1 \cdot 6,328 \cdot 10^{-7}m}{sin \left( arctan \left( \dfrac{0,185m}{2 \cdot 0,196m} \right) \right) } = 1,483 \cdot 10^{-6}m
+\end{align*}
 \subsection{Ergebnisdiskussion}
 
 \section{Spektralanalyse (Untersuchung einer unbekannten Lichtquelle)}
