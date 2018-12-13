@@ -55,7 +55,7 @@ Unter Beugung wird die Ausbreitung von Wellen in den Schattenbereich hinter Obje
 Das zu untersuchende Gitter mit Gitterkonstante $g$ wird mit einem HeNe-Laser der Wellenlänge $\lambda = 632,8nm$ beleuchtet. Die Wand dient als Schirm, weshalb der Laser so positioniert sein soll, dass der Strahl senkrecht zur Wand verläuft. Es erscheinen Beugungsmaxima auf der Wand. Abbildung \ref{fig:Gitter} zeigt diese Versuchsanordnung.
 \begin{figure}[H]
   \centering
-    \includegraphics[scale=0.75]{BeugungGitter.png}
+    \includegraphics[scale=0.75]{BeugungGitter.PNG}
   \caption{Versuchsaufbau zur Bestimmung der Gitterkonstante (aus der Versuchsanleitung)}
   \label{fig:Gitter}
 \end{figure}
@@ -82,7 +82,7 @@ Der Größtfehler $\Delta g$ der Gitterkonstante mit Gleichung \ref{eq:Gitter2} 
 Mit den Größtfehlern $\Delta s = 0,005m$ und $\Delta a_{n} = 0,002m$ ergeben sich  die Werte aus Tabelle \ref{tab:Gitter} für $\Delta g$.
 \subsection{Messwerte und Ergebnisse}
 Bekannte Wellenlänge des Lasers: $\lambda = 632,8nm = 6,328 \cdot 10^{-7}m$ \\
-Messung des Abstands Gitter-Wand: $s = 1,975m$
+Messung des Abstands Gitter-Wand: $s = 1,975m$ \\
 Tabelle \ref{tab:Gitter} zeigt für jede Ordnung $n$ die Abstandsmessung $a_{n}$ zwischen den Maxima, das Ergebnis für $g$ und den Größtfehler $\Delta g$.
 \begin{table}[H]
 \captionof{table}{Maxima-Abstand $a_{n}$, damit errechnete Gitterkonstante $g$ und deren Größtfehler $\Delta g$ nach Ordnungen $n$ der Maxima}
@@ -118,8 +118,120 @@ Da der tatsächliche Werte für die Spurweite einer CD mit $1,6 \mu m = 1,6 \cdo
 
 \section{Spektralanalyse (Untersuchung einer unbekannten Lichtquelle)}
 \subsection{Versuchsdurchführung}
+In diesem Versuch soll anhand der Spektrallinien einer Gasentladungslampe bestimmt werden, welches chemische Element in ihr verwendet wird. Dazu wird ein optisches Gitter mit dem Lampenlicht beleuchtet, welches vor dem Gitter durch den Aufbau einer Kondensorlinse, eines Spalts und einer Kollimationslinse zu intensiven parallelen Strahlen aufbereitet wird.
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.75]{Aufbau.PNG}
+  \caption{Der Aufbau für die Spektrallinienmessung von Hand (aus der Versuchsanleitung)}
+  \label{fig:Aufbau}
+\end{figure}
+Wie in Abbildung \ref{fig:Aufbau} zu sehen ist, sollten die Abstände der Linsen zum Spalt ihren Brennweiten ($f$ ist in der Abbildung die Brennweite der Kollimatorlinse) entsprechen und der Abstand Gitter-Wand $L$ sollte wesentlich größer als $f$ sein. Auf der Wand ensteht durch die Beugung ein für das Element der Lampe typisches Muster aus Spektrallinien. Das Muster ist achsensymmetrisch zur Achse Lampe-Gitter, das heißt es befindet sich jeweils links und rechts eine Linie der gleichen Wellenlänge. Durch Umstellen von Gleichung \ref{eq:Gitter2} nach $\lambda$ kann jeder Spektrallinie eine Wellenlänge zugeordnet werden:
+\begin{align*}
+\lambda = \dfrac{g a_{n}}{2 n s} = \dfrac{g a_{n}}{2 s}
+\end{align*}
+Hierbei ist $g$ die Gitterkonstante, $a_{n}$ der Abstand zwischen den beiden Spektrallinien gleicher Wellenlänge und $s$ der Abstand zwischen Gitter und Wand. Die sichtbaren Spektrallinien sind Maxima erster Ordnung, also $n = 1$. \\
+
+Als alternative Messmethode soll ein Faseroptik-Spektrometer verwendet werden, um das Licht der Lampe zu analysieren. Auch dieses arbeitet nach dem Beugungsprinzip. Das Licht wird durch eine Glasfaser in das Gerät geleitet. Dort wird es an einem Reflexionsgitter gebeugt. Ein CCD-Array detektiert auf jedem Pixel einen kleinen Wellenlängenbereich und ordnet also den Wellenlängen die Intensität im spektral aufgetrennten Licht zu. Am Laptop kann das Ergebnis in Form eines Wellenlänge-Intensitäts-Diagramms betrachtet werden.
 \subsection{Messwerte und Ergebnisse}
+\subsubsection{Messung von Hand}
+Bekannte Gitterkonstante des optischen Gitters: $g = 10nm = 10^{-5}m$ \\
+Messung des Abstands Gitter-Wand: $s = 1,367m$ \\
+Tabelle \ref{tab:Spektrum1} zeigt für jedes Linienpaar die Abstandsmessung $a_{n}$ zwischen den Linien, das Ergebnis für $\lambda$ und die Farbe.
+\begin{table}[H]
+\captionof{table}{Linien-Abstand $a_{n}$, damit errechnete Wellenlänge $\lambda$ und Farbe der fünf sichtbaren Spektrallinien-Paare}
+\begin{center}
+\begin{tabular}{l|l|l|l}
+Linie    & $a_{n}$ {[}m{]} & $\lambda$ {[}m{]} & Farbe \\
+\hline
+1          & 0,100       & $3,658 \cdot 10^{-7}$ & UV (violett auf Papier)\\
+2          & 0,109       & $3,987 \cdot 10^{-7}$ & violett \\
+3          & 0,118       & $4,316 \cdot 10^{-7}$ & blau    \\
+4          & 0,149       & $5,450 \cdot 10^{-7}$ & grün    \\
+5          & 0,153       & $5,596 \cdot 10^{-7}$ & gelb    
+\end{tabular}
+\end{center}
+\label{tab:Spektrum1}
+\end{table}
+\newpage
+\subsubsection{Messung mit dem Faseroptik-Spektrometer}
+Das Faseroptik-Spektrometer liefert das in Abbildung \ref{fig:Spektrum} gezeigte Ergebnis.
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.75]{Hg-Spektrum.JPG}
+  \caption{Messung der Intensität der Wellenlängen im Lampenlicht}
+  \label{fig:Spektrum}
+\end{figure}
+Tabelle \ref{tab:Spektrum2} zeigt die Werte von Abbildung \ref{fig:Spektrum} an den Peak-Stellen, das bedeutet die Tabelle beinhaltet alle Wellenlängen, deren Intensität einen positiven Wert hat. Die sechs Peak-Bereiche sind in der Tabelle durch '...' getrennt.
+\begin{table}[H]
+\captionof{table}{Wellenlänge und Intensität der sechs Peaks bei Spektrometer-Messung}
+\begin{center}
+\begin{tabular}{l|l|l}
+Peak & Wellenlänge [$nm$]    & Intensität [$s^{-1}$] \\
+\hline
+  & 365 & 576,84 \\
+1 & 366 & 705,64 \\
+  & 367 & 162,70 \\
+  & ...\\
+  & 404 & 878,62 \\ 
+2 & 405 & 1172,16 \\
+  & 406 & 525,76 \\
+  & ...\\ 
+  & 434 & 177,96 \\ 
+  & 435 & 2604,96 \\
+3 & 436 & 3730,64 \\
+  & 437 & 1645,22 \\
+  & 438 & 381,72 \\
+  & ...\\
+4 & 491 & 10,90 \\
+  & ...\\
+  & 545 & 1713,45 \\
+5 & 546 & 3738,40 \\
+  & 547 & 3738,65 \\
+  & 548 & 2743,87 \\
+  & 549 & 95,36 \\
+  & ...\\
+  & 576 & 1400,62 \\
+6 & 577 & 3727,04 \\
+  & 578 & 2921,99 \\
+7 & 579 & 3717,30 \\
+  & 580 & 3203,98 \\
+  & 581 & 306,09 
+\end{tabular}
+\end{center}
+\label{tab:Spektrum2}
+\end{table}
+
+\newpage
 \subsection{Ergebnisdiskussion}
+Die Versuchsanleitung gibt die in Abbildung \ref{fig:Quecksilber} gezeigten Literaturwerte zu den für Quecksilber typischen Wellenlängen an.
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.75]{Quecksilber.PNG}
+  \caption{Auszug aus der Beschreibung der Spektrallinien einiger Elemente in der Versuchsanleitung}
+  \label{fig:Quecksilber}
+\end{figure}
+In Tabelle \ref{tab:Abweichung} wird den Literaturwerten für die Spektrallinien eine Linie der Handmessung (siehe Tabelle \ref{tab:Spektrum1}) und ein Peak der Spektrometer-Messung (siehe Tabelle \ref{tab:Spektrum2}) zugeordnet.
+\begin{table}[H]
+\captionof{table}{Den Literaturwerten $\lambda_{L}$ für die Spektrallinien wird eine Linie aus der Handmessung mit ihrer Wellenlänge $\lambda_{H}$ und ein Peak der Spektrometer-Messung mit seiner Wellenlänge $\lambda_{S}$ zugeordnet und es wird die Abweichung beider Methoden vom Literaturwert berechnet.}
+\begin{center}
+\begin{tabular}{l|lll|lll}
+$\lambda_{L}$ {[}m{]} & Linie & $\lambda_{H}$ {[}nm{]} & Abweichung {[}\%{]} & Peak & $\lambda_{S}$ {[}nm{]} & Abweichung {[}\%{]}\\
+\hline
+$365,50$ & 1 & $365,8$ & +0,08 & 1 & $366,0$ & +0,14 \\
+$404,66$ & 2 & $398,7$ & -1,47 & 2 & $405,0$ & +0,08 \\
+$435,84$ & 3 & $431,6$ & -0,97 & 3 & $436,0$ & +0,04 \\
+$491,60$ & / & / & / & 4 & $491,0$ & -0,12 \\
+$546,07$ & 4 & $545,0$ & -0,20 & 5 & $546,0$ & -0,01 \\
+$576,96$ & 5 & $559,6$ & -3,01 & 6 & $577,0$ & +0,01 \\
+$579,07$ & / & / & / & 7 & $579,0$ & -0,01  
+\end{tabular}
+\end{center}
+\label{tab:Abweichung}
+\end{table}
+
+Wie die Betrachtung der Tabelle \ref{tab:Abweichung} zeigt, ist die Spektrometermessung der Handmessung überlegen. Erstens hat die Spektrometermessung sieben der Spektrallinien detektiert, während bei der Handmessung nur fünf entdeckt wurden. Insbesondere sind die Peaks 6 und 7 bei der Handmessung zu einer Linie 5 verschwommen. Die UV-Linie (Linie 1) wurde hier auch erst auf bleichmittel-haltigem Papier sichtbar. Zweitens ist die Abweichung bei der Spektrometermessung geringer, da diese die Literaturwerte immer auf einen Nanometer genau angenähert hat.
+
+Jedenfalls waren beide Methoden genau genug, um zu erkennen, dass das zu untersuchende Element die Spektrallinien von Quecksilber aufweist.
 
 \section{Beugungserscheinungen am Einzelspalt und an einem Haar}
 \subsection{Versuchsdurchführung}
@@ -176,6 +288,7 @@ Position [$mm$]    & Intensität [$V$]  \\
 \end{center}
 \label{tab:Spalt}
 \end{table}
+
 \begin{figure}[H]
   \centering
     \includegraphics[width=\textwidth]{V4_Photodiode.pdf}
@@ -215,14 +328,15 @@ Minima-Ordung	& Abstand Minima [$m$] & Spaltbreite [$m$]  \\
 \end{table}
 \subsection{Ergebnisdiskussion}
 Beim Herumexperimentieren mit der Spaltbreite des Einzelspalts ist uns aufgefallen, dass bei Verkleinerung des Spalts die Minima und Maximas n-ter Ordnung näher zusammenrücken. Dies deckt sich mit Gleichung \ref{eq:Gitter1}, in der zu sehen ist, dass die Abstände zwischen den Minimas proportional zu der Einzelspaltbreite verhält.\\
-Mittels Tabelle \ref{tab:Spalt} und Abbildung \ref{fig:Spalt} erhalten wir eine Spaltbreite von \\$d = \frac{3 * 632,8 * 10^{-9}m}{\sin{\arctan{\frac{0.02m}{2* 0.776m}}}} = 0.147mm$. Durch messen erhalten wir aus Tabelle \ref{tab:Spalt_Auswertung} eine Spaltbreite von $0.138mm$. Somit weicht die mit der Photodiode gemessene Spaltbreite um $6.7\%$ von der per Lineal gemessenen ab. Die Messmethode mittels Phododiode is viel genauer, da die Werte bei unserer Messung um  $0.5 mm$ abweichen können,und bei der Messung mit dem Lineal war dies bei etwa $2mm$.\\
+Mittels Tabelle \ref{tab:Spalt} und Abbildung \ref{fig:Spalt} erhalten wir eine Spaltbreite von
+\begin{align*}
+d = \frac{3 \cdot 632,8 \cdot 10^{-9}m}{\sin{\arctan{\frac{0.02m}{2 \cdot 0.776m}}}} = 0.147mm
+\end{align*}
+Durch Messen erhalten wir aus Tabelle \ref{tab:Spalt_Auswertung} eine Spaltbreite von $0.138mm$. Somit weicht die mit der Photodiode gemessene Spaltbreite um $6.7\%$ von der per Lineal gemessenen ab. Die Messmethode mittels Phododiode is viel genauer, da die Werte bei unserer Messung um  $0.5 mm$ abweichen können,und bei der Messung mit dem Lineal war dies bei etwa $2mm$.\\
 Bei der Messung der Haarbreite (Tabelle \ref{tab:Spalt_Auswertung_Haar}) erhalten wir einen Wert von $7,8309E-05 m$. Dies ist im Rahmen von gängigen Haarbreiten.
 \section{Modellversuch zum Auflösungsvermögen des Mikroskops}
 \subsection{Versuchsdurchführung}
 Hier bilden wir das mit dem Laser beleuchtete Gitter aus dem ersten Versuch auf die Wand ab, indem wir eine Linse der Brennweite $f=20mm$ zuhilfe nehmen. Mit einer Irisblende blenden wir alle höheren Beugungsordnungen aus, sodass nur noch das Maxima 0. Ordnung hindurch passt. Danach werden wir auch Maxima 1. und höher durch die Blende hindurch lassen.
 \subsection{Ergebnisdiskussion}
-Es war keine Struktur zu erkennen, wenn man nur das Makima 0. Ordnung durch die Blende lies. Bei hinzufügen von meheren Maximas konnte man parallele Linien erkennen. Dies zeigt, dass man beim Mikroskopieren nur eine genaue Aussage über ein Objekt machen kann, wenn mehr als 1 Maxima abgebildet wird 
-\end{document}
-
-Bei kleiner werdender Spaltbreite werden die Maxima breiter und auseinandergezogen.
+Es war keine Struktur zu erkennen, wenn man nur das Maximum 0. Ordnung durch die Blende lies. Bei hinzufügen von meheren Maximas konnte man parallele Linien erkennen. Dies zeigt, dass man beim Mikroskopieren nur eine genaue Aussage über ein Objekt machen kann, wenn mehr als 1 Maxima abgebildet wird 
 \end{document}
