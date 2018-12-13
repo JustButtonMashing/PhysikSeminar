@@ -55,7 +55,7 @@ Unter Beugung wird die Ausbreitung von Wellen in den Schattenbereich hinter Obje
 Das zu untersuchende Gitter mit Gitterkonstante $g$ wird mit einem HeNe-Laser der Wellenlänge $\lambda = 632,8nm$ beleuchtet. Die Wand dient als Schirm, weshalb der Laser so positioniert sein soll, dass der Strahl senkrecht zur Wand verläuft. Es erscheinen Beugungsmaxima auf der Wand. Abbildung \ref{fig:Gitter} zeigt diese Versuchsanordnung.
 \begin{figure}[H]
   \centering
-    \includegraphics[scale=0.75]{BeugungGitter.PNG}
+    \includegraphics[scale=0.75]{BeugungGitter.png}
   \caption{Versuchsaufbau zur Bestimmung der Gitterkonstante (aus der Versuchsanleitung)}
   \label{fig:Gitter}
 \end{figure}
@@ -121,14 +121,108 @@ Da der tatsächliche Werte für die Spurweite einer CD mit $1,6 \mu m = 1,6 \cdo
 \subsection{Messwerte und Ergebnisse}
 \subsection{Ergebnisdiskussion}
 
-\section{Strukturaufklärung (Bestimmung einer Gitterkonstanten)}
+\section{Beugungserscheinungen am Einzelspalt und an einem Haar}
 \subsection{Versuchsdurchführung}
+In diesem Versuch beleuchten wir einen Einzelspalt mittels eines HeNe-Lasers. Wir beobachten hier, wie sich die Beugungserscheinungen bei unterschiedlichen Spaltbreiten verhalten. Mittels Photodiode erfassen wir die Positionen lokaler Minima. Später ersetzen wir den Einzelspalt mit einem Haar, und bestimmen dessen Durchmesser.
 \subsection{Messwerte und Ergebnisse}
-\subsection{Ergebnisdiskussion}
 
-\section{Strukturaufklärung (Bestimmung einer Gitterkonstanten)}
-\subsection{Versuchsdurchführung}
-\subsection{Messwerte und Ergebnisse}
+\begin{table}[H]
+\captionof{table}{Gemessene Intensität zu deren Position}
+\begin{center}
+\begin{tabular}{l|l}
+Position [$mm$]    & Intensität [$V$]  \\
+\hline
+0,5	&0,04 \\
+1	&0,06\\
+1,5	&0,33\\
+2	&0,85\\
+2,5	&1,17\\
+3	&0,94\\
+3,5	&0,37\\
+4	&0,09\\
+4,5	&0,86\\
+5	&2,44\\
+5,5	&3,54\\
+6	&3,47\\
+6,5	&1,9\\
+7	&0,7\\
+7,5	&3,51\\
+8	&13,77\\
+8,5	&13,77\\
+9	&13,77\\
+9,5	&13,77\\
+10	&13,78\\
+10,5&	13,78\\
+11	&13,78\\
+11,5&	13,77\\
+12	&13,77\\
+12,5&	11,23\\
+13	&2,16\\
+13,5&	0,82\\
+14	&2,74\\
+14,5&	4,22\\
+15	&3,95\\
+15,5&	2,4\\
+16	&0,9\\
+16,5&	0,23\\
+17	&0,55\\
+17,5&	0,99\\
+18	&1,1\\
+18,5&	0,8\\
+19	&0,35\\
+19,5&	0,08\\
+20	&0,07\\
+\end{tabular}
+\end{center}
+\label{tab:Spalt}
+\end{table}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\textwidth]{V4_Photodiode.pdf}
+  \caption{Visualisierung von Tabelle \ref{tab:Spalt}}
+  \label{fig:Spalt}
+\end{figure}
+\begin{table}[H]
+\captionof{table}{Auswertung der Daten aus Tabelle \ref{tab:Spalt} und Abbildung \ref{fig:Spalt}}
+\begin{center}
+\begin{tabular}{l|l|l}
+Minima-Ordung	& Abstand Minima [$m$] & Spaltbreite [$m$]  \\
+\hline
+
+1	&0,018	&0,000132888\\
+2	&0,034	&0,000140704941176\\
+3	&0,051	&0,000140704941176\\
+\hline
+Mittelwert		&&0,000138099294118\\
+\end{tabular}
+\end{center}
+\label{tab:Spalt_Auswertung}
+\end{table}
+\begin{table}[H]
+\captionof{table}{Auswerung des Beugungsmusters an einem Haar}
+\begin{center}
+\begin{tabular}{l|l|l}
+Minima-Ordung	& Abstand Minima [$m$] & Spaltbreite [$m$]  \\
+\hline
+
+1&	0,032&	7,8309E-05\\
+2&	0,064&	7,8309E-05\\
+3&	0,096&	7,8309E-05\\
+
+\end{tabular}
+\end{center}
+\label{tab:Spalt_Auswertung_Haar}
+\end{table}
 \subsection{Ergebnisdiskussion}
+Beim Herumexperimentieren mit der Spaltbreite des Einzelspalts ist uns aufgefallen, dass bei Verkleinerung des Spalts die Minima und Maximas n-ter Ordnung näher zusammenrücken. Dies deckt sich mit Gleichung \ref{eq:Gitter1}, in der zu sehen ist, dass die Abstände zwischen den Minimas proportional zu der Einzelspaltbreite verhält.\\
+Mittels Tabelle \ref{tab:Spalt} und Abbildung \ref{fig:Spalt} erhalten wir eine Spaltbreite von \\$d = \frac{3 * 632,8 * 10^{-9}m}{\sin{\arctan{\frac{0.02m}{2* 0.776m}}}} = 0.147mm$. Durch messen erhalten wir aus Tabelle \ref{tab:Spalt_Auswertung} eine Spaltbreite von $0.138mm$. Somit weicht die mit der Photodiode gemessene Spaltbreite um $6.7\%$ von der per Lineal gemessenen ab. Die Messmethode mittels Phododiode is viel genauer, da die Werte bei unserer Messung um  $0.5 mm$ abweichen können,und bei der Messung mit dem Lineal war dies bei etwa $2mm$.\\
+Bei der Messung der Haarbreite (Tabelle \ref{tab:Spalt_Auswertung_Haar}) erhalten wir einen Wert von $7,8309E-05 m$. Dies ist im Rahmen von gängigen Haarbreiten.
+\section{Modellversuch zum Auflösungsvermögen des Mikroskops}
+\subsection{Versuchsdurchführung}
+Hier bilden wir das mit dem Laser beleuchtete Gitter aus dem ersten Versuch auf die Wand ab, indem wir eine Linse der Brennweite $f=20mm$ zuhilfe nehmen. Mit einer Irisblende blenden wir alle höheren Beugungsordnungen aus, sodass nur noch das Maxima 0. Ordnung hindurch passt. Danach werden wir auch Maxima 1. und höher durch die Blende hindurch lassen.
+\subsection{Ergebnisdiskussion}
+Es war keine Struktur zu erkennen, wenn man nur das Makima 0. Ordnung durch die Blende lies. Bei hinzufügen von meheren Maximas konnte man parallele Linien erkennen. Dies zeigt, dass man beim Mikroskopieren nur eine genaue Aussage über ein Objekt machen kann, wenn mehr als 1 Maxima abgebildet wird 
+\end{document}
+
 Bei kleiner werdender Spaltbreite werden die Maxima breiter und auseinandergezogen.
 \end{document}
