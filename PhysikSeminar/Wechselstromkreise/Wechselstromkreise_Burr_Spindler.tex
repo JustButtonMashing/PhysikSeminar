@@ -62,10 +62,22 @@ Vektoriell betrachtet ist $Z$ ein Vektor mit einer $R$-Komponente auf der x-Achs
 Im ersten Versuch wird der Scheinwiderstand $|Z|$ für einen Widerstand, einen Kondensator und eine Spule bestimmt. Im zweiten Versuch sollen Impedanz und Phasenverschiebung eines unbekannten Zweipols bestimmt werden und mit den Theoriewerten verglichen werden.
 \section{Impedanzmessung an Widerstand, Kondensator und Spule}
 \subsection{Versuchsaufbau und Durchführung}
-Der zu messende Zweipol wird wie in Abbildung \ref{fig:Aufbau} mit einem bekannten Widerstand $R_{I}$, der zur Bestimmung von $I$ dient, in Reihe geschaltet und an einen Frequenzgenerator und ein Oszilloskop angeschlossen. Auf Kanal 1 des Oszilloskops wird die Amplitude $U_{1}$ der am Zweipol anliegenden Spannung und auf Kanal 2 die Amplitude $U_{2}$ der an R\textsubscript{I} anliegenden Spannung gemessen. Mit $U_{2}$ und $R_{I} = 82 \Omega$ kann die Stromstärke berechnet werden:
+Der zu messende Zweipol wird wie in Abbildung \ref{fig:Aufbau} mit einem bekannten Widerstand $R_{I}$, der zur Bestimmung von $I$ dient, in Reihe geschaltet und an einen Frequenzgenerator und ein Oszilloskop angeschlossen. Als Frequenz wird für Widerstand und Kondensator $f = 1kHz$ und für die Spule $f = 10kHz$ gewählt. Auf Kanal 1 des Oszilloskops wird die Amplitude $U_{1}$ der am Zweipol anliegenden Spannung und auf Kanal 2 die Amplitude $U_{2}$ der an R\textsubscript{I} anliegenden Spannung gemessen. 
+
+Mit $U_{2}$ und $R_{I} = 82 \Omega$ kann dann die Stromstärke berechnet werden:
 \begin{align*}
 I = \frac{U_{2}}{R_{I}}
 \end{align*}
+Damit wird der Scheinwiderstand bestimmt:
+\begin{align*}
+|Z| = \frac{U_{1}}{I} = \frac{U_{1}}{U_{2}} \cdot R_{I}
+\end{align*}
+Tabelle ... zeigt das Zeit- und Frequenzverhalten eines Widerstands, eines Kondensators und einer Spule. Da bei jedem dieser elementaren Zweipole eine Komponente von $Z$ null ist, können die Größen $R$ bzw. $L$ bzw. $C$ leicht aus $|Z|$ berechnet werden:
+\begin{align}
+R &= |Z| \\
+C &= \frac{1}{\omega |Z|} \\
+L &= \frac{|Z|}{\omega}
+\end{align}
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.75]{Aufbau.PNG}
