@@ -57,27 +57,18 @@ $U_{0}$ und $I_{0}$ bezeichnen die Amplitudenwerte von Spannung und Stromstärke
 
 Die Impedanz eines Zweipols fasst im Realteil den Wirkwiderstand $R$ und im Imaginärteil den Blindwiderstand $X$ zusammen. Während beim Wirkwiderstand die Sinuskurven von Spannung und Strom phasengleich sind, liegt beim Blindwiderstand eine Phasenverschiebung von +90\degree oder -90\degree vor. Diese Phasenverschiebung ist der Grund, warum Wirk- und Blindwiderstände einer Schaltung nicht einfach zu einem Gesamtwiderstand addiert werden dürfen, sondern als komplexwertige Impedanz $Z$ verstanden werden. 
 
+\begin{align}
+Z = R + iX
+\end{align}
 Vektoriell betrachtet ist $Z$ ein Vektor mit einer $R$-Komponente auf der x-Achse und einer $X$-Komponente auf der y-Achse. Dann ist der Winkel $\varphi$ zwischen x-Achse und $Z$ der Phasenwinkel und die Länge $|Z|$ des Vektors der Scheinwiderstand.
 
-Im ersten Versuch wird der Scheinwiderstand $|Z|$ für einen Widerstand, einen Kondensator und eine Spule bestimmt. Im zweiten Versuch sollen Impedanz und Phasenverschiebung eines unbekannten Zweipols bestimmt werden und mit den Theoriewerten verglichen werden.
+Im ersten Versuch wird der Scheinwiderstand $|Z|$ für einen Widerstand, einen Kondensator und eine Spule bestimmt. Im zweiten Versuch sollen Impedanz und Phasenverschiebung eines unbekannten Zweipols bestimmt und der Aufbau dieses Zweipols durch Vergleich mit Theoriewerten gefolgert werden.
 \section{Impedanzmessung an Widerstand, Kondensator und Spule}
 \subsection{Versuchsaufbau und Durchführung}
-Der zu messende Zweipol wird wie in Abbildung \ref{fig:Aufbau} mit einem bekannten Widerstand $R_{I}$, der zur Bestimmung von $I$ dient, in Reihe geschaltet und an einen Frequenzgenerator und ein Oszilloskop angeschlossen. Als Frequenz wird für Widerstand und Kondensator $f = 1kHz$ und für die Spule $f = 10kHz$ gewählt. Auf Kanal 1 des Oszilloskops wird die Amplitude $U_{1}$ der am Zweipol anliegenden Spannung und auf Kanal 2 die Amplitude $U_{2}$ der an R\textsubscript{I} anliegenden Spannung gemessen. 
+Es werden vier Messungen durchgeführt: ein Widerstand, ein Kondensator und eine Spule werden mit dem Analog-Oszilloskop vermessen, anschließend die Spule nochmals mit einem Digital-Oszilloskop.
 
-Mit $U_{2}$ und $R_{I} = 82 \Omega$ kann dann die Stromstärke berechnet werden:
-\begin{align*}
-I = \frac{U_{2}}{R_{I}}
-\end{align*}
-Damit wird der Scheinwiderstand bestimmt:
-\begin{align*}
-|Z| = \frac{U_{1}}{I} = \frac{U_{1}}{U_{2}} \cdot R_{I}
-\end{align*}
-Tabelle ... zeigt das Zeit- und Frequenzverhalten eines Widerstands, eines Kondensators und einer Spule. Da bei jedem dieser elementaren Zweipole eine Komponente von $Z$ null ist, können die Größen $R$ bzw. $L$ bzw. $C$ leicht aus $|Z|$ berechnet werden:
-\begin{align}
-R &= |Z| \\
-C &= \frac{1}{\omega |Z|} \\
-L &= \frac{|Z|}{\omega}
-\end{align}
+Der zu messende Zweipol wird wie in Abbildung \ref{fig:Aufbau} mit einem bekannten Widerstand $R_{I}$, der zur Bestimmung von $I$ dient, in Reihe geschaltet und an einen Frequenzgenerator und ein Oszilloskop angeschlossen. Abbildung \ref{fig:Aufbau_Foto} zeigt den Aufbau. Als Frequenz wird für Widerstand und Kondensator $f = 1kHz$ und für die Spule $f = 10kHz$ gewählt. Auf Kanal 1 des Oszilloskops wird die Amplitude $U_{1}$ der am Zweipol anliegenden Spannung und auf Kanal 2 die Amplitude $U_{2}$ der an R\textsubscript{I} anliegenden Spannung gemessen. 
+
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.75]{Aufbau.PNG}
@@ -85,27 +76,78 @@ L &= \frac{|Z|}{\omega}
   \label{fig:Aufbau}
 \end{figure}
 
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.45]{Aufbau_Foto.JPG}
+  \caption{Aufbau des Schaltbildes in Abbildung \ref{fig:Aufbau}}
+  \label{fig:Aufbau_Foto}
+\end{figure}
+Mit $U_{2}$ und $R_{I} = 82 \Omega$ kann dann die Stromstärke berechnet werden:
+\begin{align}
+I = \frac{U_{2}}{R_{I}}
+\end{align}
+Damit wird der Scheinwiderstand bestimmt:
+\begin{align}
+|Z| = \frac{U_{1}}{I} = \frac{U_{1}}{U_{2}} \cdot R_{I}
+\end{align}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.75]{Tabelle.PNG}
+  \caption{Zeit- und Frequenzverhalten elementarer Zweipole (aus der Versuchsanleitung)}
+  \label{fig:Tabelle}
+\end{figure}
+Abbildung \ref{fig:Tabelle} zeigt das Zeit- und Frequenzverhalten eines Widerstands, eines Kondensators und einer Spule. Da bei jedem dieser elementaren Zweipole eine Komponente von $Z$ null ist, können die Größen $R$ bzw. $L$ bzw. $C$ leicht aus $|Z|$ berechnet werden:
+\begin{align}
+R &= |Z| \\
+C &= \frac{1}{\omega |Z|} \\
+L &= \frac{|Z|}{\omega}
+\end{align}
+Hierbei ist $\omega = 2 \pi f$ die Kreisfrequenz.
+
+Außerdem soll mit dem Oszilloskop die zeitliche Phasenverschiebung $\Delta t$ zwischen von $U_{1}$ in Bezug auf $U_{2}$ gemessen werden. Daraus kann durch folgendes Verhältnis auch die Phasenverschiebung $\varphi$ in Grad berechnet werden:
+\begin{align}
+\frac{\varphi}{360\degree} = \frac{\Delta t}{T} = \Delta t \cdot f
+\end{align}
+
 \subsection{Messwerte und Ergebnisse}
+In Tabelle \ref{tab:Impedanzmessung} wird die für den Zweipol charakteristische Größe $R$/$C$/$L$ und in Tabelle \ref{tab:Phasenmessung} die Phasenverschiebung zwischen Spannung und Strom ermittelt.
 \begin{table}[H]
-\captionof{table}{Messwerte für $U_{1}$, $U_{2}$ und daraus errechnete Werte für $I$ und $|Z|$.}
+\captionof{table}{Messwerte für $U_{1}$, $U_{2}$ und daraus errechnete Werte für $I$, $|Z|$ und $R$ bzw. $C$ bzw. $L$.}
 \begin{center}
-\begin{tabular}{l|l|l|l|l}
-Messung    & U\textsubscript{1} [V] & U\textsubscript{2} [V] & I [A] & |Z| [\textOmega] \\
+\begin{tabular}{l|l|l|l|l|l|l}
+Messung    & f [kHz] & U\textsubscript{1} [V] & U\textsubscript{2} [V] & I [A] & |Z| [\textOmega] &  \\
 \hline
-Widerstand        & 0,55    & 0,45   & 0,00549   & 100,222 \\
-Kondensator       & 1,2     & 0,305    & 0,00372   & 322,623 \\
-Spule             & 1,2    & 0,26    & 0,00317   & 378,462 \\
-Spule (digital)   & 1,16    & 0,27   & 0,00329   & 352,296
+Widerstand        &  1 & 0,55    & 0,45   & 0,00549   & 100,222    & R = 100,222 \textOmega \\
+Kondensator       &  1 & 1,2     & 0,305  & 0,00372   & 322,623    & C = 4,933 $\cdot$ 10\textsuperscript{-7} F \\
+Spule             & 10 & 1,2     & 0,26   & 0,00317   & 378,462    & L = 6,023 mH \\
+Spule (digital)   & 10 & 1,16    & 0,27   & 0,00329   & 352,296    & L = 5,606 mH
 \end{tabular}
 \end{center}
-\label{tab:Gitter}
+\label{tab:Impedanzmessung}
 \end{table}
-\subsubsection{Messung am Widerstand}
-\subsubsection{Messung am Kondensator}
-\subsubsection{Messung an der Spule}
+
+\begin{table}[H]
+\captionof{table}{Messwerte für $\Delta t$ und daraus errechnete Werte für $\varphi$.}
+\begin{center}
+\begin{tabular}{l|l|l|l}
+Messung    & f [kHz] & \textDelta t [ms] & \textphi [\degree] \\
+\hline
+Widerstand        & 1 &  0       & 0       \\
+Kondensator       & 1 & -0,22    & -79,2   \\
+Spule             & 10 &  0,021   & +75,6   \\
+Spule (digital)   & 10 &  0,026   & +93,6   
+\end{tabular}
+\end{center}
+\label{tab:Phasenmessung}
+\end{table}
+
 \subsection{Fehlerrechnung}
+Die Spannung kann mit einer Genauigkeit von $\Delta U_{1} = \Delta U_{2} = 0,025V$ am Oszilloskop abgelesen werden. Damit ergibt sich für die Größtfehler der Zweipolgrößen:
 \begin{align*}
-\Delta R_{2} = \left| \frac{\partial R_{2}}{\partial U_{1}} \right| \Delta U_{1} + \left| \frac{\partial R_{2}}{\partial U_{2}} \right| \Delta U_{2} = \frac{R_{1}U_{2}}{U_{1}^2} \cdot \Delta U_{1} + \frac{R_{1}}{U_{1}} \cdot \Delta U_{2}
+\Delta R &= \Delta |Z| = \left| \frac{\partial R}{\partial U_{1}} \right| \Delta U_{1} + \left| \frac{\partial R_{2}}{\partial U_{2}} \right| \Delta U_{2} = \frac{R_{I}}{U_{2}} \cdot \Delta U_{1} + \frac{R_{I}U_{1}}{U_{2}^2} \cdot \Delta U_{2} = 10,12 \Omega \\
+\Delta C &= \left| \frac{\partial C}{\partial |Z|} \right| \Delta |Z| = \frac{1}{\omega |Z|^2} \cdot \Delta |Z| = 5,07 \cdot 10^{-8} F\\
+\Delta L &= \left| \frac{\partial L}{\partial |Z|} \right| \Delta |Z| = \frac{1}{\omega} \cdot \Delta |Z| = 7,05 \cdot 10^{-4} H
 \end{align*}
 \section{Impedanzmessung an einem unbekannten Zweipol)}
 
