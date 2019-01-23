@@ -86,6 +86,7 @@ Damit werden die Kennlinie und das $P$-$R$-Diagramm erstellt und diskutiert.
 
 Als Lampe wird zuerst eine Kohlefaden-, dann eine Metallfadenlampe verwendet.
 \subsection{Messwerte und Ergebnisse}
+Tabelle \ref{tab:Kohlefadenlampe} zeigt die Messreihe für die Kohlefadenlampe, Tabelle \ref{tab:Metallfadenlampe} für die Metallfadenlampe. Abbildung \ref{fig:V1_Kennlinien} zeigt die diesen Tabellen entsprechenden $U$-$I$-Kennlinien und Abbildung \ref{fig:V1_Leistung-Widerstand} den Widerstand $R$ aufgetragen über die Verlustleistung $P$ beider Lampen.
 \begin{table}[H]
 \captionof{table}{Messwerte für I und daraus errechnete Werte für P und R bei schrittweise variierter Spannung U für eine Kohlefadenlampe.}
 \begin{center}
@@ -200,7 +201,7 @@ U [V]   &   I [mA]   &   P [W]   &   R [\textOmega]\\
   \label{fig:V1_Leistung-Widerstand}
 \end{figure}
 \subsection{Ergebnisdiskussion}
-
+Die Kennlinie der Kohlefadenlampe kann besser durch einen linearen Verlauf angenähert werden als die der Metallfadenlampe, welche einen stärkeren sigmoiden Charakter hat. Bei der Metallfadenlampe steigt der Strom im Bereich [-5V, +5V] am stärksten an. Im gemessenen Spannungsbereich liegt der Betrag des Stroms der Metallfadenlampe bei allen Spannungen über der Kohlefadenlampe, erst an den Randwerten nähern sich die Kurven einander an. Da der Widerstand das Inverse der Steigung der Kennlinie ist, bedeutet das, dass die Kohlefadenlampe im gemessenen Spannungsbereich einen höheren Widerstand hat, was auch im $P$-$R$-Diagramm zu sehen ist. Dort liegt der Widerstand des Kohlefadens im ganzen Bereich über dem des Metallfadens, erst am Rand (etwa 1 W) sind die Widerstände nahezu identisch. Das bedeutet, dass die Metallfadenlampe wegen ihres geringeren Widerstandes bei gleicher Leistung besser geeignet ist.
 
 
 
@@ -217,7 +218,7 @@ U [V]   &   I [mA]   &   P [W]   &   R [\textOmega]\\
 
 Der Versuchsaufbau bleibt derselbe, nur wird jetzt statt einer Lampe eine Zenerdiode eingebaut und vermessen (siehe Abbildung \ref{fig:Aufbau2}). Ziel des Versuchs ist, die Kennlinie der Diode zu erstellen. Die Spannungswerte $U$ werden so frei gewählt, dass der Verlauf der Kennlinie gut erkennbar ist, dazu wird die Stromstärke $I$ gemessen. Laut Versuchsanleitung ist eine Kennlinie wie in Abbildung \ref{fig:Kennlinie_Diode} zu erwarten. Allerdings darf der Strom nicht 200mA übersteigen, um die Diode nicht zu beschädigen.
 \subsection{Messwerte und Ergebnisse}
-Die Wertepaare der Kennlinie sind in Tabelle \ref{tab:Diode} aufgeführt und in Abbildung \ref{fig:V2_Kennlinie} eingetragen.
+Die Wertepaare der Kennlinie sind in Tabelle \ref{tab:Diode} aufgeführt und in Abbildung \ref{fig:V2_Kennlinie} eingetragen (bei den negativen Spannungen ist $I$ konstant null).
 
 \begin{figure}[H]
   \centering
@@ -255,7 +256,6 @@ U [mV]   &   I [mA] \\
 \label{tab:Diode}
 \end{table}
 
-
 \subsection{Ergebnisdiskussion}
 
 \begin{figure}[H]
@@ -265,7 +265,9 @@ U [mV]   &   I [mA] \\
   \label{fig:Kennlinie_Diode}
 \end{figure}
 
+Die ermittelte Kennlinie hat einen exponentiellen Verlauf wie in Abbildung \ref{fig:Kennlinie_Diode} skizziert. Sie unterscheidet sich sehr stark von den Kennlinien im vorherigen Versuch: bis 400 mV war kein Strom messbar, ab etwa 800 mV erscheint die Kennlinie beinahe wie eine vertikale Gerade. Diese scheinbare Gerade wird zur $U$-Achse verlängert, um die Schleusenspannung $U_{S} = 800 mV$ abzuschätzen.
 
+Damit eignet sich die Diode, um Strom nur bei einer gewünschten Spannung durchfließen zu lassen. 
 
 
 \pagebreak
