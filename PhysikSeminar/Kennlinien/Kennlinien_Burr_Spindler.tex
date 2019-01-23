@@ -84,11 +84,10 @@ R(0V) = \frac{1V-(-1V)}{I(1V)-I(-1V)} = \frac{2V}{I(1V)-I(-1V)}
 \end{align}
 Damit werden die Kennlinie und das $P$-$R$-Diagramm erstellt und diskutiert.
 
-Als Lampe wird zuerst eine Metallfaden-, dann eine Kohlefadenlampe verwendet.
+Als Lampe wird zuerst eine Kohlefaden-, dann eine Metallfadenlampe verwendet.
 \subsection{Messwerte und Ergebnisse}
-\subsubsection{Messung an der Metallfadenlampe}
 \begin{table}[H]
-\captionof{table}{Messwerte für I und daraus errechnete Werte für P und R bei schrittweise variierter Spannung U für eine Metallfadenlampe.}
+\captionof{table}{Messwerte für I und daraus errechnete Werte für P und R bei schrittweise variierter Spannung U für eine Kohlefadenlampe.}
 \begin{center}
 \begin{tabular}{l|l|l|l}
 U [V]   &   I [mA]   &   P [W]   &   R [\textOmega]\\
@@ -134,12 +133,11 @@ U [V]   &   I [mA]   &   P [W]   &   R [\textOmega]\\
 +40,0   &   +24,5   &   0,980   &   1630 
 \end{tabular}
 \end{center}
-\label{tab:Metallfadenlampe}
+\label{tab:Kohlefadenlampe}
 \end{table}
 
-\subsubsection{Messung an der Kohlefadenlampe}
 \begin{table}[H]
-\captionof{table}{Messwerte für $I$ und daraus errechnete Werte für $P$ und $R$ bei schrittweise variierter Spannung $U$ für eine Kohlefadenlampe.}
+\captionof{table}{Messwerte für $I$ und daraus errechnete Werte für $P$ und $R$ bei schrittweise variierter Spannung $U$ für eine Metallfadenlampe.}
 \begin{center}
 \begin{tabular}{l|l|l|l}
 U [V]   &   I [mA]   &   P [W]   &   R [\textOmega]\\
@@ -185,9 +183,22 @@ U [V]   &   I [mA]   &   P [W]   &   R [\textOmega]\\
 +40,0   &   +24,4   &   0,976   &   1640 
 \end{tabular}
 \end{center}
-\label{tab:Kohlefadenlampe}
+\label{tab:Metallfadenlampe}
 \end{table}
 
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.5]{V1_Kennlinien.PNG}
+  \caption{Die gemessenen $U$-$I$-Kennlinien für beide Lampen}
+  \label{fig:V1_Kennlinien}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.5]{V1_Leistung-Widerstand.PNG}
+  \caption{Widerstand $R$ über Verlustleistung $P$ aufgetragen für beide Lampen}
+  \label{fig:V1_Leistung-Widerstand}
+\end{figure}
 \subsection{Ergebnisdiskussion}
 
 
@@ -206,7 +217,15 @@ U [V]   &   I [mA]   &   P [W]   &   R [\textOmega]\\
 
 Der Versuchsaufbau bleibt derselbe, nur wird jetzt statt einer Lampe eine Zenerdiode eingebaut und vermessen (siehe Abbildung \ref{fig:Aufbau2}). Ziel des Versuchs ist, die Kennlinie der Diode zu erstellen. Die Spannungswerte $U$ werden so frei gewählt, dass der Verlauf der Kennlinie gut erkennbar ist, dazu wird die Stromstärke $I$ gemessen. Laut Versuchsanleitung ist eine Kennlinie wie in Abbildung \ref{fig:Kennlinie_Diode} zu erwarten. Allerdings darf der Strom nicht 200mA übersteigen, um die Diode nicht zu beschädigen.
 \subsection{Messwerte und Ergebnisse}
-Die Wertepaare der Kennlinie sind in Tabelle \ref{tab:Diode} aufgeführt.
+Die Wertepaare der Kennlinie sind in Tabelle \ref{tab:Diode} aufgeführt und in Abbildung \ref{fig:V2_Kennlinie} eingetragen.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.5]{V2_Kennlinie.PNG}
+  \caption{Die gemessene $U$-$I$-Kennlinien der Zenerdiode}
+  \label{fig:V2_Kennlinie}
+\end{figure}
+
 \begin{table}[H]
 \captionof{table}{Messwerte für $I$ bei variierter Spannung $U$ für eine np-Diode.}
 \begin{center}
@@ -235,6 +254,8 @@ U [mV]   &   I [mA] \\
 \end{center}
 \label{tab:Diode}
 \end{table}
+
+
 \subsection{Ergebnisdiskussion}
 
 \begin{figure}[H]
