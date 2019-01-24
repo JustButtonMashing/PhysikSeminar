@@ -273,7 +273,7 @@ Damit eignet sich die Diode, um Strom nur bei einer gewünschten Spannung, der S
 \pagebreak
 \section{Halbleiter-Diode bei Wechselspannung}
 \subsection{Versuchsaufbau und Durchführung}
-
+In diesem Versuch wird eine Diode unter Wechselstrom untersucht. Dazu schalten wir einen Widerstand und eine Diode in Reihe. Über die Variation der Spannungsamplitude bestimmen wir die Schleusenspannung.  
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.75]{Aufbau3.JPG}
@@ -281,17 +281,22 @@ Damit eignet sich die Diode, um Strom nur bei einer gewünschten Spannung, der S
   \label{fig:Aufbau3}
 \end{figure}
 
-\subsection{Messwerte und Ergebnisse}
-
 \subsection{Ergebnisdiskussion}
-
-
-
+\begin{figure}[H]
+  \centering
+  	\includegraphics[width=0.6\textwidth]{3_400.jpg}
+    \includegraphics[width=0.6\textwidth]{3_800.jpg}
+    \includegraphics[width=0.6\textwidth]{3_2000.jpg}
+  \caption{Oszilloskop mit $U_0 = 800mV$}
+  \label{fig:800mv}
+\end{figure}
+Anhand der Abbildungen in \ref{fig:800mv} ist deutlich zu erkennen, dass die Durchschlagsspannung zwischen $400mV$ und $800mV$ liegen muss. Die blaue Linie ist hier $U_R$ und die gelbe Linie ist $U$ aus Abbildung \ref{fig:Aufbau3}. 
+Durch Variation der Spannung zwischen $400mV$ und $800mV$ konnten wir eine Durschlagsspannung von etwa $724mV$ auslesen, wobei allerdings der Übergang fließend war.
 
 \pagebreak
 \section{Kennlinie eines MOS-FET}
 \subsection{Versuchsaufbau und Durchführung}
-
+In diesem Versuch untersuchen wir ein MOS-FET. Dazu schließen wir wie in Abbildung \ref{fig:Aufbau4} beschrieben den MOS-FET an die Spannungsquellen an. Um die Steuerkennlinie zu ermitteln wählen wir zuerst $U_D$ konstant mit $1V$. Später um die Arbeitskennlinie zu ermitteln wählen wir $U_G$ konstant mit von uns gewählten $2,4V$. 
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.75]{Aufbau4.JPG}
@@ -300,9 +305,79 @@ Damit eignet sich die Diode, um Strom nur bei einer gewünschten Spannung, der S
 \end{figure}
 
 \subsection{Messwerte und Ergebnisse}
+\begin{table}[H]
+\captionof{table}{Messwerte für $I_D$ bei variierter Spannung $U_G$ und fester Spannung $U_D = 1V$ eines MOS-FETs}
+\begin{center}
+\begin{tabular}{l|l}
+
+$U_G$ [mV]   &   $I_D$ [mA] \\
+\hline
+0	&0,2\\
+1	&0\\
+1,5	&0\\
+2	&0\\
+2,25&	0,4\\
+2,5	&4,3\\
+2,6	&16,2\\
+2,7	&21\\
+2,8	&24,9\\
+2,9	&29,4\\
+3	&36,3\\
+3,1	&43\\
+3,2	&53,7\\
+3,3	&66\\
+3,4	&91,1\\
+3,5	&130,4\\
+3,55&	167,3\\
+3,6	&175,4\\
+3,7	&190\\
+\end{tabular}
+\end{center}
+\label{tab:mosfet_UG}
+\end{table}
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.5]{v4_steuer.pdf}
+  \caption{Steuerkennlinie unseres MOS-FETs}
+  \label{fig:Kennlinie_M_Gate}
+\end{figure}
+\begin{table}[H]
+\captionof{table}{Messwerte für $I_D$ bei variierter Spannung $U_D$ und fester Spannung $U_G = 2.4V$ eines MOS-FETs}
+\begin{center}
+\begin{tabular}{l|l}
+$U_D$ [mV]   &   $I_D$ [mA] \\
+\hline
+0	&0,4\\
+0,2	&1,5\\
+0,4	&1,6\\
+0,6	&1,8\\
+0,8	&2\\
+1	&2,3\\
+1,2	&2,6\\
+1,4	&3\\
+1,6	&3,6\\
+1,8	&4\\
+2	&4,6\\
+2,2	&5,1\\
+2,4	&5,7\\
+2,6	&6,1\\
+2,8	&6,5\\
+3	&6,8\\
+\end{tabular}
+\end{center}
+\label{tab:mosfet_UD}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.5]{v4_arbeit.pdf}
+  \caption{Arbeitskennlinie unseres MOS-FETs}
+  \label{fig:Kennlinie_S_Source}
+\end{figure}
 
 \subsection{Ergebnisdiskussion}
-
+Unsere gemessene Steuerkennlinie aus Abbildung \ref{fig:Kennlinie_M_Gate} verläuft exponentiell wie in Abbildung \ref{fig:Kennlinie_Gate} beschrieben. Die gemessene Arbeitskennlinie aus Abbildung \ref{fig:Kennlinie_S_Source} steigt wie in Abbildung \ref{fig:Kennlinie_Gate} bis zu einem Abschnürpunkt, allerdings scheinen die Messpunkte nicht mit ausreichend hoher Spannung gemessen zu sein, sodass man den Steigungsabfall nicht sehen kann.
+Mittels dem Steigungsdreieck aus \ref{fig:Kennlinie_Gate} können wir die maximale Steigung der Steuerkennlinie auf $738\frac{mA}{V}$ bestimmen. Diese Eigenschaften lassen sich nutzen, um elektrische Schaltungen zu realisieren, beispielsweise Gatter, Integrierte Schaltkreise oder Computer. 
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.75]{Kennlinie_Gate.JPG}

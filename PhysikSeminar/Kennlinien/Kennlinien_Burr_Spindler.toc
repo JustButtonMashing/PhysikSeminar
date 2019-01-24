@@ -1,17 +1,16 @@
 \contentsline {section}{\numberline {1}Einleitung}{3}{section.1}
 \contentsline {section}{\numberline {2}Kennlinien von Metallfaden- und Kohlefadenlampe}{4}{section.2}
 \contentsline {subsection}{\numberline {2.1}Versuchsaufbau und Durchf\IeC {\"u}hrung}{4}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Messwerte und Ergebnisse}{6}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Ergebnisdiskussion}{8}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.2}Messwerte und Ergebnisse}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Ergebnisdiskussion}{7}{subsection.2.3}
 \contentsline {section}{\numberline {3}Kennlinie einer Halbleiter-Diode}{9}{section.3}
 \contentsline {subsection}{\numberline {3.1}Versuchsaufbau und Durchf\IeC {\"u}hrung}{9}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Messwerte und Ergebnisse}{9}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Ergebnisdiskussion}{10}{subsection.3.3}
-\contentsline {section}{\numberline {4}Halbleiter-Diode bei Wechselspannung}{11}{section.4}
-\contentsline {subsection}{\numberline {4.1}Versuchsaufbau und Durchf\IeC {\"u}hrung}{11}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Messwerte und Ergebnisse}{11}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Ergebnisdiskussion}{11}{subsection.4.3}
-\contentsline {section}{\numberline {5}Kennlinie eines MOS-FET}{12}{section.5}
-\contentsline {subsection}{\numberline {5.1}Versuchsaufbau und Durchf\IeC {\"u}hrung}{12}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Messwerte und Ergebnisse}{12}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Ergebnisdiskussion}{12}{subsection.5.3}
+\contentsline {section}{\numberline {4}Halbleiter-Diode bei Wechselspannung}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Versuchsaufbau und Durchf\IeC {\"u}hrung}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Ergebnisdiskussion}{14}{subsection.4.2}
+\contentsline {section}{\numberline {5}Kennlinie eines MOS-FET}{16}{section.5}
+\contentsline {subsection}{\numberline {5.1}Versuchsaufbau und Durchf\IeC {\"u}hrung}{16}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Messwerte und Ergebnisse}{17}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Ergebnisdiskussion}{19}{subsection.5.3}
