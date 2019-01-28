@@ -149,7 +149,65 @@ Die Spannung kann mit einer Genauigkeit von $\Delta U_{1} = \Delta U_{2} = 0,025
 \Delta C &= \left| \frac{\partial C}{\partial |Z|} \right| \Delta |Z| = \frac{1}{\omega |Z|^2} \cdot \Delta |Z| = 5,07 \cdot 10^{-8} F\\
 \Delta L &= \left| \frac{\partial L}{\partial |Z|} \right| \Delta |Z| = \frac{1}{\omega} \cdot \Delta |Z| = 7,05 \cdot 10^{-4} H
 \end{align*}
-\section{Impedanzmessung an einem unbekannten Zweipol)}
+\section{Impedanzmessung an einem unbekannten Zweipol}
+\subsection{Versuchsaufbau und Durchführung}
+In diesem Versuch untersuchen wir einen unbekannten Zweipol, welcher mit einem Ohm'schen Widerstand in Reihe geschaltet wurde. Bei unterschiedlichen Frequenzen messen wir jeweils  die Spannungsdifferenzen an den Widerständen und die zeitliche Phasenverschiebung zwischen den Widerständen.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.75\textwidth]{V_3_Aufbau.jpg}
+  \caption{Versuchsaufbau mit unbekannten Zweipol}
+  \label{fig:v3a}
+\end{figure}
+\subsection{Messwerte und Ergebnisse}
+\begin{table}[H]
+\captionof{table}{Messwerte für $U_1$ und $U_2$ und daraus errechnete Werte}
+\begin{center}
+\begin{tabular}{l|l|l|l|l|l|l|l}
+f [kHz] & $\omega$ [$\frac{rad}{s}$] & $U_1$ [V] & $U_2$ [V] & I [mA] & |Z| [$\Omega$] & $\delta$t [ms] & $\Phi$ [$\degree$]\\ 
+\hline
+30	&188	&0,01	&1,28&	0,0001219	&10496	&-7,2	&-102,24\\
+60	&376	&0,02	&1,32&	0,0002439	&5412	&-4	&-93,6\\
+100	&628	&0,0344	&1,32&	0,0004195	&3146	&-2,4	&-93,6\\
+200	&1256	&0,068	&1,32&	0,0008292	&1591	&-1,3	&-86,4\\
+400	&2513	&0,132	&1,32&	0,001609	&820	&-0,68	&-82,08\\
+1000&	6283&	0,272&	1,08&	0,003317&	325	&-0,3	&-72\\
+2000&	12566&	0,368&	0,88&	0,004487&	196	&-0,17	&-57,6\\
+4000&	25132&	0,44&	0,72&	0,005365&	134	&-0,104	&-30,24\\
+10000&	62831&	0,46&	0,65&	0,005609&	115	&-0,046	&-14,4\\
+20000&	125663&	0,46&	0,64&	0,005609&	114	&-0,024	&-7,2\\
+40000&	2513273&	0,48&	0,62&	0,005853&	105	&-0,0124&	-1,44\\
+80000&	502654&	0,48	&0,6	&0,005853	&102,5	&-0,0062&	-1,44\\
+\end{tabular}
+\end{center}
+\label{tab:Phasenmessung}
+\end{table}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\textwidth]{logo.pdf}
+  \caption{Vergleich des gemessenen Scheinwiderstandes zu dem Erwarteten}
+  \label{fig:Aufbau_Foto}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=\textwidth]{logo_.pdf}
+  \caption{Vergleich der gemessenen Phasenverschiebung zu dem Erwarteten}
+  \label{fig:Aufbau_Foto}
+\end{figure}
+\subsection{Ergebinsdiskussion}
+Bei im niederen Frequenzbereich verhält sich der Scheinwiderstand wie eine Spule, und
+wir haben eine Phasenverschiebung um $-90\degree$ Im höheren Frequenzbereich verhält sich
+der Scheinwiderstand wie ein ohm’scher Widerstand, und die Phasenverschiebung nähert
+sich 0 an. Wir schließen daraus, dass eine Kondensator und ein ohm’scher Widerstand in Reihe
+geschaltet sind, da sich beide Scheinwiderstände addieren.
+Mit kleineren Abweichungen decken sich unsere Messungen gut mit den erwarteten Ergebnissen. Betrachten wir den hohen Frequenzbereich, fällt der Induktive Anteil nicht
+ins Gewicht. Für den Ohm’schen Widerstand können wir aus Tabelle 3 $R = 109,125 \pm 5,46$ $\Omega$
+als Mittelwert ermitteln. Der Induktive Anteil lässt sich mittels dem Durchschnitt der ersten 6 Messpunkte mittels $C = \frac{1}{\omega * \sqrt{Z^2 - R^2}} = (4,944 \pm 0,163 )*10^{-7}$ $F$ ermitteln
 
 \section{Fazit}
+Falls unbekannte Bauteile in einer Schaltung ermittelt werden müssen, ist es nützlich ein
+bekanntes Bauteil mit der Schaltung in Reihe zu schalten. So kann man mittels Messungen zwischen den Bauteilen unterscheiden. Der Verlauf der Scheinwiderstandskurve sagt
+aus, ob das Bauteil induktive oder kapazitive Elemente enthält. Phasenverschiebungen
+geben zusätzlich Aufschluss darüber. Mit den Kirchhoff’schen Regeln und Maschenregeln
+lassen sich die anderen Werte ermitteln
 \end{document}
