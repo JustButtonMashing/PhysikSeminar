@@ -50,7 +50,7 @@ Newton definierte die Viskosität mithilfe des folgenden Versuchsaufbaus (siehe 
 
 \begin{figure}[H]
   \centering
-    \includegraphics[scale=0.4]{GaussFit.PNG}
+    \includegraphics[scale=0.75]{Definition.PNG}
   \caption{Aufbau zu Newtons Definition der Viskosität (aus der Versuchsanleitung)}
   \label{fig:Definition}
 \end{figure}
@@ -210,8 +210,22 @@ Mit dem Plotprogramm Origin werden diese gemessenen Zeiten in sechs Klassen eing
 \end{figure}
 Aus dem Histogramm ergibt sich der Mittelwert $t$ = 36,04 s und eine Standardabweichung von \textsigma(t) = 0,36 s.
 \subsection{Ergebnisdiskussion}
+Der berechnete Mittelwert für die Viskosität von $\eta$ = 1899 mPa$\cdot$s übersteigt den Literaturwert bei 21\degree C von 1813 mPa$\cdot$s um 4,7 \%, liegt aber noch im Fehlerintervall 1813 mPa$\cdot$s $\pm$ 115 mPa$\cdot$s. 
 
+Bei den Viskositäten einzelner Kugelgrößen ist ein Ansteigen der Viskosität mit zunehmender Kugelgröße zu erkennen. Bei $d_{1}$ = 1 mm beträgt die Abweichung nur -0,8 \%, während sie bei $d_{4}$ = 4 mm schon +11,5 \% beträgt.
 
+Ein Grund für die Zunahme der Abweichung bei zunehmender Kugelgröße ist, dass die Strömung als laminar angenommen wird, aber mit zunehmendem Kugeldurchmesser turbulenter wird, sodass die Kugel abgebremst wird (siehe Abbildung \ref{fig:laminar}). Die Bedingung für laminare Umströmung ist, dass $R >> r$.
+
+Außerdem gilt für die Strömung in einem Rohr, dass die Fließgeschwindigkeit von der Mitte zum Rohrrand abnimmt, da die äußerste Fluidschicht an der Rohrwand haftet. Also erhöhen näher am Rand fallende Kugeln die bestimmte Viskosität.
+
+Die lineare Regression liefert mit $\eta$ = 1800 mPa $\cdot$ s einen Wert der mit dem Wert bei $d_{1}$ beinahe übereinstimmt und nur um -0,7 \% vom Literaturwert abweicht.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.75]{laminar.PNG}
+  \caption{Laminare und turbulente Umströmung einer Kugel (aus der Versuchsanleitung)}
+  \label{fig:laminar}
+\end{figure}
 
 
 
@@ -219,6 +233,12 @@ Aus dem Histogramm ergibt sich der Mittelwert $t$ = 36,04 s und eine Standardabw
 \pagebreak
 \section{Bestimmung der Glycerinkonzentration mit dem Kapillarviskosimeter}
 \subsection{Versuchsaufbau und Durchführung}
+\begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.75]{Viskosimeter.PNG}
+  \caption{Aufbau des Kapillar-Viskosimeters nach Ubbelohde (aus der Versuchsanleitung)}
+  \label{fig:Viskosimeter}
+\end{figure}
 \subsection{Messwerte und Ergebnisse}
 \subsection{Statistische Auswertung}
 \subsection{Ergebnisdiskussion}
