@@ -10,7 +10,7 @@
 \usepackage{gensymb}         %Gradzeichen
 \usepackage{float}           %Positionierung von Tabellen und Abb
 \usepackage{textgreek}
-
+\usepackage{color,soul}
 
 \begin{document}
 \begin{titlepage}
@@ -115,7 +115,7 @@ U [V]   &   I [mA]   &   P [W]   &   R [\textOmega]\\
 0       &   0       &   0       &   2000 \\
 +1,0    &   +0,5    &   0,0005  &   2000 \\
 +2,0    &   +1,0    &   0,0020  &   2000 \\
-+3,0    &   +1,6    &   0,0048  &   1880 \\
++3,0	&	+1,6	&   0,0048  &   1880 \\
 +4,0    &   +2,2    &   0,0088  &   1820 \\
 +5,0    &   +2,7    &   0,014   &   1850 \\
 +7,5    &   +4,1    &   0,031   &   1830 \\
@@ -201,8 +201,11 @@ U [V]   &   I [mA]   &   P [W]   &   R [\textOmega]\\
   \label{fig:V1_Leistung-Widerstand}
 \end{figure}
 \subsection{Ergebnisdiskussion}
-Die Kennlinie der Kohlefadenlampe kann besser durch einen linearen Verlauf angenähert werden als die der Metallfadenlampe, welche einen stärkeren sigmoiden Charakter hat. Bei der Metallfadenlampe steigt der Strom im Bereich [-5V, +5V] am stärksten an. Im gemessenen Spannungsbereich liegt der Betrag des Stroms der Metallfadenlampe bei allen Spannungen über der Kohlefadenlampe, erst an den Randwerten nähern sich die Kurven einander an. Da der Widerstand das Inverse der Steigung der Kennlinie ist, bedeutet das, dass die Kohlefadenlampe im gemessenen Spannungsbereich einen höheren Widerstand hat, was auch im $P$-$R$-Diagramm zu sehen ist. Dort liegt der Widerstand des Kohlefadens im ganzen Bereich über dem des Metallfadens, erst am Rand (etwa 1W) sind die Widerstände nahezu identisch. Das bedeutet, dass die Metallfadenlampe wegen ihres geringeren Widerstandes bei gleicher Leistung besser geeignet ist.
-
+Die Kennlinie der Kohlefadenlampe kann besser durch einen linearen Verlauf angenähert werden als die der Metallfadenlampe, welche einen stärkeren sigmoiden Charakter hat. Bei der Metallfadenlampe steigt der Strom im Bereich [-5V, +5V] am stärksten an. Im gemessenen Spannungsbereich liegt der Betrag des Stroms der Metallfadenlampe bei allen Spannungen über der Kohlefadenlampe, erst an den Randwerten nähern sich die Kurven einander an. Da der Widerstand das Inverse der Steigung der Kennlinie ist, bedeutet das, dass die Kohlefadenlampe im gemessenen Spannungsbereich einen höheren Widerstand hat, was auch im $P$-$R$-Diagramm zu sehen ist. Dort liegt der Widerstand des Kohlefadens im ganzen Bereich über dem des Metallfadens, erst am Rand (etwa 1W) sind die Widerstände nahezu identisch. Das bedeutet, dass die Metallfadenlampe wegen ihres geringeren Widerstandes bei gleicher Leistung besser geeignet ist. \hl{Denn nach}
+\begin{equation}
+G=\sigma \frac{A}{l} \Leftrightarrow R=\frac{l}{\sigma A}
+\end{equation}
+ \hl{ist der Widerstand proportional zu dem Inversen der Leitf"ahigkeit $\sigma$}
 
 
 \pagebreak
@@ -222,8 +225,8 @@ Die Wertepaare der Kennlinie sind in Tabelle \ref{tab:Diode} aufgeführt und in 
 
 \begin{figure}[H]
   \centering
-    \includegraphics[scale=0.5]{V2_Kennlinie.PNG}
-  \caption{Die gemessene $U$-$I$-Kennlinien der Zenerdiode}
+    \includegraphics[width=0.75\textwidth]{V2_Kennlinie.pdf}
+  \caption{\hl{Die gemessene $U$-$I$-Kennlinien der Zenerdiode}}
   \label{fig:V2_Kennlinie}
 \end{figure}
 
@@ -267,36 +270,47 @@ U [mV]   &   I [mA] \\
 
 Die ermittelte Kennlinie hat einen exponentiellen Verlauf wie in Abbildung \ref{fig:Kennlinie_Diode} skizziert. Sie unterscheidet sich sehr stark von den Kennlinien im vorherigen Versuch: bis 400mV war kein Strom messbar, ab etwa 800mV erscheint die Kennlinie beinahe wie eine vertikale Gerade. Diese scheinbare Gerade wird zur $U$-Achse verlängert, um die Schleusenspannung $U_{S} = 800mV$ abzuschätzen.
 
-Damit eignet sich die Diode, um Strom nur bei einer gewünschten Spannung, der Schleusenspannung, durchfließen zu lassen. Ab dieser Spannung steigt der Strom mit zunehmender Spannung scheinbar linear (tatsächlich exponentiell) an. 
+Damit eignet sich die Diode, um Strom nur bei einer gewünschten Spannung, der Schleusenspannung, durchfließen zu lassen. Ab dieser Spannung steigt der Strom mit zunehmender Spannung scheinbar linear (tatsächlich exponentiell) an.
+\hl{Die Diode l"asst den Strom bei der Schleusenspannung durchflie\ss{}en, da die Sperrschicht am pn-"Ubergang schwindet und so die Sperrschicht d"unn genug ist. }
 
 
 \pagebreak
 \section{Halbleiter-Diode bei Wechselspannung}
 \subsection{Versuchsaufbau und Durchführung}
-In diesem Versuch wird eine Diode unter Wechselstrom untersucht. Dazu schalten wir einen Widerstand und eine Diode in Reihe. Über die Variation der Spannungsamplitude bestimmen wir die Schleusenspannung.  
+In diesem Versuch wird eine Diode unter Wechselstrom untersucht. Dazu schalten wir einen Widerstand und eine Diode in Reihe. Über die Variation der Spannungsamplitude bestimmen wir die Schleusenspannung. \hl{Mit der Spannungskurve am Sinusgenerator messen wir die tats"achliche generierte Spannung. Mit $U_R$ messen wir die Spannungsdifferenz zwischen vor und nach dem Widerstand, sodass wir ermitteln k"onnen, ob und wann Strom durch die Diode flie\ss{}t}
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.75]{Aufbau3.JPG}
-  \caption{Schaltbild zur Messung mit Oszillator an einer Halbleiter-Diode (aus der Versuchsanleitung)}
+  \caption{Schaltbild zur Messung mit Oszilloskop an einer Halbleiter-Diode (aus der Versuchsanleitung)}
   \label{fig:Aufbau3}
 \end{figure}
 
 \subsection{Ergebnisdiskussion}
 \begin{figure}[H]
   \centering
-  	\includegraphics[width=0.6\textwidth]{3_400.jpg}
-    \includegraphics[width=0.6\textwidth]{3_800.jpg}
-    \includegraphics[width=0.6\textwidth]{3_2000.jpg}
-  \caption{Oszilloskop mit $U_0 = 800mV$}
+  	\includegraphics[width=0.7\textwidth]{3_400.jpg}
+  \caption{\hl{Diode bei $U=400mV$}}
+  \label{fig:400mv}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.7\textwidth]{3_800.jpg}
+  \caption{Diode bei $U=800mV$}
   \label{fig:800mv}
 \end{figure}
-Anhand der Abbildungen in \ref{fig:800mv} ist deutlich zu erkennen, dass die Durchschlagsspannung zwischen $400mV$ und $800mV$ liegen muss. Die blaue Linie ist hier $U_R$ und die gelbe Linie ist $U$ aus Abbildung \ref{fig:Aufbau3}. 
-Durch Variation der Spannung zwischen $400mV$ und $800mV$ konnten wir eine Durschlagsspannung von etwa $724mV$ auslesen, wobei allerdings der Übergang fließend war.
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.7\textwidth]{3_2000.jpg}
+  \caption{\hl{Diode bei $U=2000mV$}}
+  \label{fig:2000mv}
+\end{figure}
+Anhand der Abbildungen \ref{fig:400mv}, \ref{fig:800mv} und \ref{fig:2000mv} ist deutlich zu erkennen, dass die Durchschlagsspannung zwischen $400mV$ und $800mV$ liegen muss. Die blaue Linie ist hier $U_R$ und die gelbe Linie ist $U$ aus Abbildung \ref{fig:Aufbau3}. 
+Durch Variation der Spannung zwischen $400mV$ und $800mV$ konnten wir eine Durschlagsspannung von etwa $724mV$ auslesen, wobei allerdings der Übergang fließend war. \hl{Zu sehen ist ausserdem, dass bei negativen Spannungen kein Strom durch die Diode flie\ss{}t, da dies die Sperrschicht vergr"o\ss{}ert. Bei einer angelegten Spannung von 2V erkennt man zudem, dass die Diode fast den gesamten Strom flie\ss{}en l"asst}
 
 \pagebreak
 \section{Kennlinie eines MOS-FET}
 \subsection{Versuchsaufbau und Durchführung}
-In diesem Versuch untersuchen wir ein MOS-FET. Dazu schließen wir wie in Abbildung \ref{fig:Aufbau4} beschrieben den MOS-FET an die Spannungsquellen an. Um die Steuerkennlinie zu ermitteln wählen wir zuerst $U_D$ konstant mit $1V$. Später um die Arbeitskennlinie zu ermitteln wählen wir $U_G$ konstant mit von uns gewählten $2,4V$. 
+In diesem Versuch untersuchen wir ein MOS-FET. Dazu schließen wir wie in Abbildung \ref{fig:Aufbau4} beschrieben den MOS-FET an die Spannungsquellen an. \hl{Wir messen den Spannungsverlauf zwischen Ground und Gate, und zwischen Ground und Drain. Zudem messen wir den Stromfluss durch das MOS-FET. } Um die Steuerkennlinie zu ermitteln wählen wir zuerst $U_D$ konstant mit $1V$. Später, um die Arbeitskennlinie zu ermitteln, wählen wir $U_G$ konstant mit von uns gewählten $2,4V$. 
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.75]{Aufbau4.JPG}
@@ -338,7 +352,7 @@ $U_G$ [mV]   &   $I_D$ [mA] \\
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.5]{v4_steuer.pdf}
-  \caption{Steuerkennlinie unseres MOS-FETs}
+  \caption{Steuerkennlinie unseres MOS-FETs \hl{mit $U_{DS}=1V$}}
   \label{fig:Kennlinie_M_Gate}
 \end{figure}
 \begin{table}[H]
@@ -371,12 +385,14 @@ $U_D$ [mV]   &   $I_D$ [mA] \\
 \begin{figure}[H]
   \centering
     \includegraphics[scale=0.5]{v4_arbeit.pdf}
-  \caption{Arbeitskennlinie unseres MOS-FETs}
+  \caption{Arbeitskennlinie unseres MOS-FETs \hl{mit $U_{DS}=2,4V$}}
   \label{fig:Kennlinie_S_Source}
 \end{figure}
 
 \subsection{Ergebnisdiskussion}
-Unsere gemessene Steuerkennlinie aus Abbildung \ref{fig:Kennlinie_M_Gate} verläuft exponentiell wie in Abbildung \ref{fig:Kennlinie_Gate} beschrieben. Die gemessene Arbeitskennlinie aus Abbildung \ref{fig:Kennlinie_S_Source} steigt wie in Abbildung \ref{fig:Kennlinie_Gate} bis zu einem Abschnürpunkt, allerdings scheinen die Messpunkte nicht mit ausreichend hoher Spannung gemessen zu sein, sodass man den Steigungsabfall nicht sehen kann.
+Unsere gemessene Steuerkennlinie aus Abbildung \ref{fig:Kennlinie_M_Gate} verläuft exponentiell wie in Abbildung \ref{fig:Kennlinie_Gate} beschrieben. 
+\hl{Denn falls die Gatespannung steigt, so steigt auch die Anzahl an Ladungstr"agern im n-Kanal. So steigt damit auch der Strom "uber das MOS-FET.} Die gemessene Arbeitskennlinie aus Abbildung \ref{fig:Kennlinie_S_Source} steigt wie in Abbildung \ref{fig:Kennlinie_Gate} bis zu einem Abschnürpunkt, allerdings scheinen die Messpunkte nicht mit ausreichend hoher Spannung gemessen zu sein, sodass man den Steigungsabfall nicht sehen kann.
+\hl{Der Grund daf"ur ist, dass die Sperrschicht bei dieser Spannung so gro\ss{} ist, sodass der n-Kanal abgeschn"urt wird.}
 Mittels dem Steigungsdreieck aus \ref{fig:Kennlinie_Gate} können wir die maximale Steigung der Steuerkennlinie auf $738\frac{mA}{V}$ bestimmen. Diese Eigenschaften lassen sich nutzen, um elektrische Schaltungen zu realisieren, beispielsweise Gatter, Integrierte Schaltkreise oder Computer. 
 \begin{figure}[H]
   \centering
@@ -392,4 +408,5 @@ Mittels dem Steigungsdreieck aus \ref{fig:Kennlinie_Gate} können wir die maxima
   \label{fig:Kennlinie_Drain}
 \end{figure}
 
+\section{Laborheft}
 \end{document}
